@@ -25,8 +25,8 @@ The system implements a **"modify → evaluate → keep/revert"** loop, inspired
 
 ```mermaid
 graph TD
-    P["🧬 Population<br/>(59 prompts)"] --> M["✂️ mutate.py<br/>crossover / append / rewrite"]
-    M --> E["📊 evaluate.py<br/>200+ quality signals"]
+    P["🧬 Population<br/>(79 prompts)"] --> M["✂️ mutate.py<br/>crossover / append / rewrite"]
+    M --> E["📊 evaluate.py<br/>500+ quality signals"]
     E --> R["📝 reflect.py<br/>rank, observe, persist"]
     R --> S["🏆 Select best →<br/>repeat (gen++)"]
     S --> P

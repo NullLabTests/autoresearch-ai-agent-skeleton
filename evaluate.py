@@ -1215,6 +1215,66 @@ def evaluate_population():
             if "zero trust" in content:
                 score += 2
 
+            
+            if "tensorflow" in content:
+                score += 2
+
+            
+            if "apache spark" in content or "pyspark" in content:
+                score += 2
+
+            
+            if "rtl" in content or "right-to-left" in content:
+                score += 2
+
+            
+            if "square" in content:
+                score += 2
+
+            
+            if "typedoc" in content:
+                score += 2
+
+            
+            if "telegram" in content:
+                score += 2
+
+            
+            if "invoice" in content:
+                score += 2
+
+            
+            if "jest" in content:
+                score += 2
+
+            
+            if "memento" in content:
+                score += 2
+
+            
+            if "ldap" in content or "active directory" in content:
+                score += 2
+
+            
+            if "pyright" in content or "basedpyright" in content:
+                score += 2
+
+            
+            if "neo4j" in content or "graph database" in content:
+                score += 2
+
+            
+            if "wheel" in content:
+                score += 2
+
+            
+            if "chain of responsibility" in content:
+                score += 2
+
+            
+            if "terragrunt" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
