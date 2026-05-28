@@ -975,6 +975,66 @@ def evaluate_population():
             if "__slots__" in content:
                 score += 2
 
+            
+            if "webassembly" in content or "wasm" in content:
+                score += 2
+
+            
+            if "metabase" in content or "redash" in content:
+                score += 2
+
+            
+            if "edge function" in content or "edge compute" in content:
+                score += 2
+
+            
+            if "setuptools" in content:
+                score += 2
+
+            
+            if "webgl" in content:
+                score += 2
+
+            
+            if "rum" in content or "real user" in content:
+                score += 2
+
+            
+            if "dynatrace" in content:
+                score += 2
+
+            
+            if "cassandra" in content or "scylla" in content:
+                score += 2
+
+            
+            if "config defaults" in content:
+                score += 2
+
+            
+            if "gdpr" in content:
+                score += 2
+
+            
+            if "docusaurus" in content:
+                score += 2
+
+            
+            if "airflow" in content:
+                score += 2
+
+            
+            if "sigNoz" in content or "signoz" in content:
+                score += 2
+
+            
+            if "nats" in content or "nats.io" in content:
+                score += 2
+
+            
+            if "sitemap" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
