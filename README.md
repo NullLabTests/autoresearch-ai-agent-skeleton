@@ -102,7 +102,7 @@ git clone https://github.com/NullLabTests/autoresearch-ai-agent-skeleton.git
 cd autoresearch-ai-agent-skeleton
 
 # Run a single evaluation on the current prompt
-python eval.py --prompt prompt.txt
+python eval.py
 
 # Run the full evolutionary loop
 chmod +x run_evolution.sh
@@ -131,19 +131,26 @@ python evolve_forever.py 200
 autoresearch-ai-agent-skeleton/
 ├── README.md              # This file
 ├── LICENSE                # MIT license
-├── program.md             # Instructions for OpenCode/Cursor
+├── .gitignore
 ├── prompt.txt             # Seed prompt (outer loop)
-├── eval.py                # Simple score evaluator (outer loop)
-├── auto_evolve.py         # Automated evolution orchestration
+├── eval.py                # Quick prompt evaluator (outer loop)
+│
+├── evaluate.py            # Scoring engine — 500+ quality signals
 ├── mutate.py              # Genetic mutation engine
-├── evaluate.py            # 200+ signal scoring engine
 ├── reflect.py             # Generation reflection & insights
-├── run_evolution.sh       # Full automation script
-├── reflection.md          # Historical record of all generations
-├── results.log            # Latest evaluation results
-├── population/            # Evolved prompts (59 and counting)
-├── generated/             # Generated outputs
-└── .gitignore
+├── run_evolution.sh       # Bash loop: mutate → evaluate → reflect → commit
+│
+├── auto_evolve.py         # Automated evolution with adaptive signal injection
+├── evolve_forever.py      # Aggressive evolution (200+ cycles, 400+ signals)
+│
+├── program.md             # Instructions for OpenCode/Cursor
+├── pyproject.toml         # Python project config
+│
+├── population/            # Evolved prompts (79 and counting)
+├── generated/             # Generated agent project outputs
+├── reflection.md          # Full historical record (4,561 lines)
+├── results.log            # Latest evaluation scores
+└── autoresearch-ai-agent-skeleton/  # Legacy nested structure
 ```
 
 ## 💡 Why This Matters

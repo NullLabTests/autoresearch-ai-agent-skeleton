@@ -1575,6 +1575,66 @@ def evaluate_population():
             if "cypress" in content:
                 score += 2
 
+            
+            if "crossplane" in content:
+                score += 2
+
+            
+            if "victorops" in content:
+                score += 2
+
+            
+            if "pagespeed" in content or "page speed" in content:
+                score += 2
+
+            
+            if "interpreter" in content:
+                score += 2
+
+            
+            if "strangler" in content or "strangler fig" in content:
+                score += 2
+
+            
+            if "cookie consent" in content or "cookie banner" in content:
+                score += 2
+
+            
+            if "tensorrt" in content:
+                score += 2
+
+            
+            if "vue" in content or "nuxt" in content:
+                score += 2
+
+            
+            if "mongodb" in content or "mongo" in content:
+                score += 2
+
+            
+            if "singleton" in content:
+                score += 2
+
+            
+            if "flutter" in content or "dart" in content:
+                score += 2
+
+            
+            if "ipfs" in content:
+                score += 2
+
+            
+            if "tailwind" in content:
+                score += 2
+
+            
+            if "canary test" in content:
+                score += 2
+
+            
+            if "builder" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
