@@ -71,13 +71,14 @@ xychart-beta
 
 ## 📈 Current Status
 
-- **Latest Generation:** 59
-- **Population Size:** 59 prompts
-- **Best Score:** 500/500 (ceiling reached)
-- **Prompts at Ceiling:** 24 of 59 prompts score max
-- **Score Progression:** 35 → 86 → 92 → 140 → 196 → 286 → 330 → 422 → 500
+- **Latest Generation:** 79
+- **Population Size:** 79 prompts
+- **Best Score:** 596 (and climbing — ceiling was raised by `auto_evolve.py`)
+- **Reflection History:** 4,561 lines covering the full evolution
+- **Evaluation Signals:** 500+ quality checks (auto-expanded via signal injection)
+- **Score Progression:** 35 → 86 → 140 → 330 → 422 → 500 → 550 → 596
 
-The system has **saturated the scoring ceiling**. The next frontier is evolving the evaluation function itself to score for deeper qualities.
+> The evaluation function itself **co-evolves** alongside the prompts. When scores saturated at 500, `auto_evolve.py` injected fresh scoring signals into `evaluate.py` — raising the ceiling and creating new targets for the prompts to optimize toward.
 
 > What elite prompts generate:
 > - Full `src/package/` layout with 20+ modules
@@ -91,7 +92,7 @@ The system has **saturated the scoring ceiling**. The next frontier is evolving 
 > - Design patterns: factory, strategy, observer, repository, pipeline
 > - CI/CD with GitHub Actions + dependabot + pre-commit
 
-📖 [View full evolution history →](reflection.md)
+📖 [View full evolution history →](reflection.md) *(4,561 lines and counting)*
 
 ## 🚀 Quick Start
 

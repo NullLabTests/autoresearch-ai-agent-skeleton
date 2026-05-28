@@ -1395,6 +1395,66 @@ def evaluate_population():
             if "concurrent.futures" in content or "threadpoolexecutor" in content or "processpoolexecutor" in content:
                 score += 2
 
+            
+            if "jenkins" in content:
+                score += 2
+
+            
+            if "soc2" in content or "soc 2" in content:
+                score += 2
+
+            
+            if "cffi" in content or "cython" in content:
+                score += 2
+
+            
+            if "avro" in content:
+                score += 2
+
+            
+            if "paypal" in content:
+                score += 2
+
+            
+            if "dagster" in content:
+                score += 2
+
+            
+            if "railway" in content or "render" in content:
+                score += 2
+
+            
+            if "model serving" in content or "model deployment" in content:
+                score += 2
+
+            
+            if "anthropic" in content or "claude" in content:
+                score += 2
+
+            
+            if "sox" in content or "sarbanes" in content:
+                score += 2
+
+            
+            if "vllm" in content:
+                score += 2
+
+            
+            if "domain driven" in content or "ddd" in content:
+                score += 2
+
+            
+            if "service worker" in content:
+                score += 2
+
+            
+            if "semantic version" in content or "semver" in content:
+                score += 2
+
+            
+            if "circleci" in content or "circle ci" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
