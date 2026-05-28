@@ -1875,6 +1875,66 @@ def evaluate_population():
             if "multipart" in content:
                 score += 2
 
+            
+            if "logz.io" in content or "logz" in content:
+                score += 2
+
+            
+            if "singledispatch" in content:
+                score += 2
+
+            
+            if "opengraph" in content or "open graph" in content:
+                score += 2
+
+            
+            if "product catalog" in content:
+                score += 2
+
+            
+            if "dotenv" in content:
+                score += 2
+
+            
+            if "flink" in content or "apache flink" in content:
+                score += 2
+
+            
+            if "webauthn" in content or "fido2" in content or "passkey" in content:
+                score += 2
+
+            
+            if "pypi" in content:
+                score += 2
+
+            
+            if "honeycomb" in content:
+                score += 2
+
+            
+            if "collections" in content:
+                score += 2
+
+            
+            if "monorepo" in content:
+                score += 2
+
+            
+            if "session management" in content:
+                score += 2
+
+            
+            if "gcp" in content or "google cloud" in content:
+                score += 2
+
+            
+            if "fid" in content or "first input" in content:
+                score += 2
+
+            
+            if "config class" in content or "config model" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
