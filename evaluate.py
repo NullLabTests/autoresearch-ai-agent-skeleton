@@ -735,7 +735,7 @@ def evaluate_population():
             
             if "securitycontext" in content or "security context" in content:
                 score += 2
-            scores[f] = round(min(500.0, score), 1)
+            scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
     if scores:
