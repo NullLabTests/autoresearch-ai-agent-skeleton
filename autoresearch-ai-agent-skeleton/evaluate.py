@@ -660,6 +660,60 @@ def evaluate_population():
             
             if "bulkhead" in content or "bulk head" in content:
                 score += 2
+            
+            if "build matrix" in content or "matrix" in content:
+                score += 2
+            
+            if "refresh token" in content or "token refresh" in content:
+                score += 2
+            
+            if "hsts" in content or "strict-transport" in content:
+                score += 2
+            
+            if "contributing" in content or "contributing.md" in content:
+                score += 2
+            
+            if "approval" in content or "approvaltest" in content:
+                score += 2
+            
+            if "semantic release" in content or "semantic-release" in content:
+                score += 2
+            
+            if "brotli" in content or "zstd" in content:
+                score += 2
+            
+            if "seccomp" in content or "apparmor" in content:
+                score += 2
+            
+            if "correlation" in content and ("id" in content or "header" in content):
+                score += 2
+            
+            if "proxy" in content and ("http" in content or "https" in content):
+                score += 2
+            
+            if "asyncio.queue" in content or "asyncio.Queue" in content:
+                score += 2
+            
+            if "dns" in content and ("resolve" in content or "lookup" in content):
+                score += 2
+            
+            if "content-type" in content or "content type" in content:
+                score += 2
+            
+            if "pagination" in content:
+                score += 2
+            
+            if "conftest" in content:
+                score += 2
+            
+            if "non-root" in content or "nonroot" in content:
+                score += 2
+            
+            if "artifact" in content and ("upload" in content or "download" in content):
+                score += 2
+            
+            if "asyncio.semaphore" in content or "asyncio.Semaphore" in content:
+                score += 2
             scores[f] = round(min(500.0, score), 1)
             print(f"{f}: {scores[f]}")
     

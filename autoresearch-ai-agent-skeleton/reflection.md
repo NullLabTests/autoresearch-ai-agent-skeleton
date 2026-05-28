@@ -1310,3 +1310,642 @@ Population size: 43
 - Vision/multimodal model support is forward-looking
 - New scoring frontier: breaking past 250
 
+
+## Generation @ 2026-05-28 01:56
+Population size: 44
+
+**Best:** prompt_031.txt (360.0)
+
+### Rankings
+- prompt_031.txt: 360.0
+- prompt_034.txt: 360.0
+- prompt_035.txt: 360.0
+- prompt_037.txt: 360.0
+- prompt_038.txt: 360.0
+- prompt_039.txt: 360.0
+- prompt_040.txt: 360.0
+- prompt_041.txt: 360.0
+- prompt_042.txt: 360.0
+- prompt_043.txt: 360.0
+- prompt_033.txt: 330.0
+- prompt_036.txt: 325.0
+- prompt_044.txt: 324.0
+- prompt_029.txt: 300.0
+- prompt_032.txt: 256.0
+- prompt_025.txt: 226.0
+- prompt_026.txt: 222.0
+- prompt_023.txt: 190.0
+- prompt_021.txt: 186.0
+- prompt_019.txt: 176.0
+- prompt_024.txt: 176.0
+- prompt_017.txt: 172.0
+- prompt_013.txt: 151.0
+- prompt_009.txt: 134.0
+- prompt_014.txt: 133.0
+- prompt_022.txt: 133.0
+- prompt_030.txt: 129.0
+- prompt_020.txt: 127.0
+- prompt_008.txt: 125.0
+- prompt_011.txt: 125.0
+- prompt_015.txt: 124.0
+- prompt_010.txt: 117.0
+- prompt_005.txt: 90.0
+- prompt_016.txt: 87.0
+- prompt_003.txt: 86.0
+- prompt_018.txt: 86.0
+- prompt_027.txt: 85.0
+- prompt_004.txt: 79.0
+- prompt_006.txt: 79.0
+- prompt_007.txt: 79.0
+- prompt_012.txt: 79.0
+- prompt_028.txt: 79.0
+- prompt_002.txt: 75.0
+- prompt_001.txt: 35.0
+
+**Average:** 198.2  |  **Max:** 360.0  |  **Min:** 35.0
+**Spread (1st-2nd):** +0.0
+
+### Observations
+- Auth/security is differentiating top prompts
+- Database/storage persistence separates elite prompts
+- Integration testing depth is a new frontier
+- Kubernetes/container orchestration adds ops readiness
+- Design patterns (factory, strategy) improve architecture
+- Circuit breaker pattern adds resilience
+- Background task/worker support for async operations
+- OpenAPI/Swagger documentation is emerging
+- Vision/multimodal model support is forward-looking
+- New scoring frontier: breaking past 250
+
+
+## Generation @ 2026-05-28 01:56
+Population size: 45
+
+**Best:** prompt_031.txt (360.0)
+
+### Rankings
+- prompt_031.txt: 360.0
+- prompt_034.txt: 360.0
+- prompt_035.txt: 360.0
+- prompt_037.txt: 360.0
+- prompt_038.txt: 360.0
+- prompt_039.txt: 360.0
+- prompt_040.txt: 360.0
+- prompt_041.txt: 360.0
+- prompt_042.txt: 360.0
+- prompt_043.txt: 360.0
+- prompt_045.txt: 360.0
+- prompt_033.txt: 330.0
+- prompt_036.txt: 325.0
+- prompt_044.txt: 324.0
+- prompt_029.txt: 300.0
+- prompt_032.txt: 256.0
+- prompt_025.txt: 226.0
+- prompt_026.txt: 222.0
+- prompt_023.txt: 190.0
+- prompt_021.txt: 186.0
+- prompt_019.txt: 176.0
+- prompt_024.txt: 176.0
+- prompt_017.txt: 172.0
+- prompt_013.txt: 151.0
+- prompt_009.txt: 134.0
+- prompt_014.txt: 133.0
+- prompt_022.txt: 133.0
+- prompt_030.txt: 129.0
+- prompt_020.txt: 127.0
+- prompt_008.txt: 125.0
+- prompt_011.txt: 125.0
+- prompt_015.txt: 124.0
+- prompt_010.txt: 117.0
+- prompt_005.txt: 90.0
+- prompt_016.txt: 87.0
+- prompt_003.txt: 86.0
+- prompt_018.txt: 86.0
+- prompt_027.txt: 85.0
+- prompt_004.txt: 79.0
+- prompt_006.txt: 79.0
+- prompt_007.txt: 79.0
+- prompt_012.txt: 79.0
+- prompt_028.txt: 79.0
+- prompt_002.txt: 75.0
+- prompt_001.txt: 35.0
+
+**Average:** 201.8  |  **Max:** 360.0  |  **Min:** 35.0
+**Spread (1st-2nd):** +0.0
+
+### Observations
+- Auth/security is differentiating top prompts
+- Database/storage persistence separates elite prompts
+- Integration testing depth is a new frontier
+- Kubernetes/container orchestration adds ops readiness
+- Design patterns (factory, strategy) improve architecture
+- Circuit breaker pattern adds resilience
+- Background task/worker support for async operations
+- OpenAPI/Swagger documentation is emerging
+- Vision/multimodal model support is forward-looking
+- New scoring frontier: breaking past 250
+
+
+## Generation @ 2026-05-28 01:56
+Population size: 46
+
+**Best:** prompt_031.txt (360.0)
+
+### Rankings
+- prompt_031.txt: 360.0
+- prompt_034.txt: 360.0
+- prompt_035.txt: 360.0
+- prompt_037.txt: 360.0
+- prompt_038.txt: 360.0
+- prompt_039.txt: 360.0
+- prompt_040.txt: 360.0
+- prompt_041.txt: 360.0
+- prompt_042.txt: 360.0
+- prompt_043.txt: 360.0
+- prompt_045.txt: 360.0
+- prompt_033.txt: 330.0
+- prompt_036.txt: 325.0
+- prompt_046.txt: 325.0
+- prompt_044.txt: 324.0
+- prompt_029.txt: 300.0
+- prompt_032.txt: 256.0
+- prompt_025.txt: 226.0
+- prompt_026.txt: 222.0
+- prompt_023.txt: 190.0
+- prompt_021.txt: 186.0
+- prompt_019.txt: 176.0
+- prompt_024.txt: 176.0
+- prompt_017.txt: 172.0
+- prompt_013.txt: 151.0
+- prompt_009.txt: 134.0
+- prompt_014.txt: 133.0
+- prompt_022.txt: 133.0
+- prompt_030.txt: 129.0
+- prompt_020.txt: 127.0
+- prompt_008.txt: 125.0
+- prompt_011.txt: 125.0
+- prompt_015.txt: 124.0
+- prompt_010.txt: 117.0
+- prompt_005.txt: 90.0
+- prompt_016.txt: 87.0
+- prompt_003.txt: 86.0
+- prompt_018.txt: 86.0
+- prompt_027.txt: 85.0
+- prompt_004.txt: 79.0
+- prompt_006.txt: 79.0
+- prompt_007.txt: 79.0
+- prompt_012.txt: 79.0
+- prompt_028.txt: 79.0
+- prompt_002.txt: 75.0
+- prompt_001.txt: 35.0
+
+**Average:** 204.5  |  **Max:** 360.0  |  **Min:** 35.0
+**Spread (1st-2nd):** +0.0
+
+### Observations
+- Auth/security is differentiating top prompts
+- Database/storage persistence separates elite prompts
+- Integration testing depth is a new frontier
+- Kubernetes/container orchestration adds ops readiness
+- Design patterns (factory, strategy) improve architecture
+- Circuit breaker pattern adds resilience
+- Background task/worker support for async operations
+- OpenAPI/Swagger documentation is emerging
+- Vision/multimodal model support is forward-looking
+- New scoring frontier: breaking past 250
+
+
+## Generation @ 2026-05-28 01:56
+Population size: 47
+
+**Best:** prompt_031.txt (360.0)
+
+### Rankings
+- prompt_031.txt: 360.0
+- prompt_034.txt: 360.0
+- prompt_035.txt: 360.0
+- prompt_037.txt: 360.0
+- prompt_038.txt: 360.0
+- prompt_039.txt: 360.0
+- prompt_040.txt: 360.0
+- prompt_041.txt: 360.0
+- prompt_042.txt: 360.0
+- prompt_043.txt: 360.0
+- prompt_045.txt: 360.0
+- prompt_047.txt: 360.0
+- prompt_033.txt: 330.0
+- prompt_036.txt: 325.0
+- prompt_046.txt: 325.0
+- prompt_044.txt: 324.0
+- prompt_029.txt: 300.0
+- prompt_032.txt: 256.0
+- prompt_025.txt: 226.0
+- prompt_026.txt: 222.0
+- prompt_023.txt: 190.0
+- prompt_021.txt: 186.0
+- prompt_019.txt: 176.0
+- prompt_024.txt: 176.0
+- prompt_017.txt: 172.0
+- prompt_013.txt: 151.0
+- prompt_009.txt: 134.0
+- prompt_014.txt: 133.0
+- prompt_022.txt: 133.0
+- prompt_030.txt: 129.0
+- prompt_020.txt: 127.0
+- prompt_008.txt: 125.0
+- prompt_011.txt: 125.0
+- prompt_015.txt: 124.0
+- prompt_010.txt: 117.0
+- prompt_005.txt: 90.0
+- prompt_016.txt: 87.0
+- prompt_003.txt: 86.0
+- prompt_018.txt: 86.0
+- prompt_027.txt: 85.0
+- prompt_004.txt: 79.0
+- prompt_006.txt: 79.0
+- prompt_007.txt: 79.0
+- prompt_012.txt: 79.0
+- prompt_028.txt: 79.0
+- prompt_002.txt: 75.0
+- prompt_001.txt: 35.0
+
+**Average:** 207.8  |  **Max:** 360.0  |  **Min:** 35.0
+**Spread (1st-2nd):** +0.0
+
+### Observations
+- Auth/security is differentiating top prompts
+- Database/storage persistence separates elite prompts
+- Integration testing depth is a new frontier
+- Kubernetes/container orchestration adds ops readiness
+- Design patterns (factory, strategy) improve architecture
+- Circuit breaker pattern adds resilience
+- Background task/worker support for async operations
+- OpenAPI/Swagger documentation is emerging
+- Vision/multimodal model support is forward-looking
+- New scoring frontier: breaking past 250
+
+
+## Generation @ 2026-05-28 01:56
+Population size: 48
+
+**Best:** prompt_031.txt (360.0)
+
+### Rankings
+- prompt_031.txt: 360.0
+- prompt_034.txt: 360.0
+- prompt_035.txt: 360.0
+- prompt_037.txt: 360.0
+- prompt_038.txt: 360.0
+- prompt_039.txt: 360.0
+- prompt_040.txt: 360.0
+- prompt_041.txt: 360.0
+- prompt_042.txt: 360.0
+- prompt_043.txt: 360.0
+- prompt_045.txt: 360.0
+- prompt_047.txt: 360.0
+- prompt_048.txt: 360.0
+- prompt_033.txt: 330.0
+- prompt_036.txt: 325.0
+- prompt_046.txt: 325.0
+- prompt_044.txt: 324.0
+- prompt_029.txt: 300.0
+- prompt_032.txt: 256.0
+- prompt_025.txt: 226.0
+- prompt_026.txt: 222.0
+- prompt_023.txt: 190.0
+- prompt_021.txt: 186.0
+- prompt_019.txt: 176.0
+- prompt_024.txt: 176.0
+- prompt_017.txt: 172.0
+- prompt_013.txt: 151.0
+- prompt_009.txt: 134.0
+- prompt_014.txt: 133.0
+- prompt_022.txt: 133.0
+- prompt_030.txt: 129.0
+- prompt_020.txt: 127.0
+- prompt_008.txt: 125.0
+- prompt_011.txt: 125.0
+- prompt_015.txt: 124.0
+- prompt_010.txt: 117.0
+- prompt_005.txt: 90.0
+- prompt_016.txt: 87.0
+- prompt_003.txt: 86.0
+- prompt_018.txt: 86.0
+- prompt_027.txt: 85.0
+- prompt_004.txt: 79.0
+- prompt_006.txt: 79.0
+- prompt_007.txt: 79.0
+- prompt_012.txt: 79.0
+- prompt_028.txt: 79.0
+- prompt_002.txt: 75.0
+- prompt_001.txt: 35.0
+
+**Average:** 210.9  |  **Max:** 360.0  |  **Min:** 35.0
+**Spread (1st-2nd):** +0.0
+
+### Observations
+- Auth/security is differentiating top prompts
+- Database/storage persistence separates elite prompts
+- Integration testing depth is a new frontier
+- Kubernetes/container orchestration adds ops readiness
+- Design patterns (factory, strategy) improve architecture
+- Circuit breaker pattern adds resilience
+- Background task/worker support for async operations
+- OpenAPI/Swagger documentation is emerging
+- Vision/multimodal model support is forward-looking
+- New scoring frontier: breaking past 250
+
+
+## Generation @ 2026-05-28 01:56
+Population size: 49
+
+**Best:** prompt_031.txt (360.0)
+
+### Rankings
+- prompt_031.txt: 360.0
+- prompt_034.txt: 360.0
+- prompt_035.txt: 360.0
+- prompt_037.txt: 360.0
+- prompt_038.txt: 360.0
+- prompt_039.txt: 360.0
+- prompt_040.txt: 360.0
+- prompt_041.txt: 360.0
+- prompt_042.txt: 360.0
+- prompt_043.txt: 360.0
+- prompt_045.txt: 360.0
+- prompt_047.txt: 360.0
+- prompt_048.txt: 360.0
+- prompt_049.txt: 360.0
+- prompt_033.txt: 330.0
+- prompt_036.txt: 325.0
+- prompt_046.txt: 325.0
+- prompt_044.txt: 324.0
+- prompt_029.txt: 300.0
+- prompt_032.txt: 256.0
+- prompt_025.txt: 226.0
+- prompt_026.txt: 222.0
+- prompt_023.txt: 190.0
+- prompt_021.txt: 186.0
+- prompt_019.txt: 176.0
+- prompt_024.txt: 176.0
+- prompt_017.txt: 172.0
+- prompt_013.txt: 151.0
+- prompt_009.txt: 134.0
+- prompt_014.txt: 133.0
+- prompt_022.txt: 133.0
+- prompt_030.txt: 129.0
+- prompt_020.txt: 127.0
+- prompt_008.txt: 125.0
+- prompt_011.txt: 125.0
+- prompt_015.txt: 124.0
+- prompt_010.txt: 117.0
+- prompt_005.txt: 90.0
+- prompt_016.txt: 87.0
+- prompt_003.txt: 86.0
+- prompt_018.txt: 86.0
+- prompt_027.txt: 85.0
+- prompt_004.txt: 79.0
+- prompt_006.txt: 79.0
+- prompt_007.txt: 79.0
+- prompt_012.txt: 79.0
+- prompt_028.txt: 79.0
+- prompt_002.txt: 75.0
+- prompt_001.txt: 35.0
+
+**Average:** 214.0  |  **Max:** 360.0  |  **Min:** 35.0
+**Spread (1st-2nd):** +0.0
+
+### Observations
+- Auth/security is differentiating top prompts
+- Database/storage persistence separates elite prompts
+- Integration testing depth is a new frontier
+- Kubernetes/container orchestration adds ops readiness
+- Design patterns (factory, strategy) improve architecture
+- Circuit breaker pattern adds resilience
+- Background task/worker support for async operations
+- OpenAPI/Swagger documentation is emerging
+- Vision/multimodal model support is forward-looking
+- New scoring frontier: breaking past 250
+
+
+## Generation @ 2026-05-28 01:56
+Population size: 50
+
+**Best:** prompt_031.txt (360.0)
+
+### Rankings
+- prompt_031.txt: 360.0
+- prompt_034.txt: 360.0
+- prompt_035.txt: 360.0
+- prompt_037.txt: 360.0
+- prompt_038.txt: 360.0
+- prompt_039.txt: 360.0
+- prompt_040.txt: 360.0
+- prompt_041.txt: 360.0
+- prompt_042.txt: 360.0
+- prompt_043.txt: 360.0
+- prompt_045.txt: 360.0
+- prompt_047.txt: 360.0
+- prompt_048.txt: 360.0
+- prompt_049.txt: 360.0
+- prompt_050.txt: 360.0
+- prompt_033.txt: 330.0
+- prompt_036.txt: 325.0
+- prompt_046.txt: 325.0
+- prompt_044.txt: 324.0
+- prompt_029.txt: 300.0
+- prompt_032.txt: 256.0
+- prompt_025.txt: 226.0
+- prompt_026.txt: 222.0
+- prompt_023.txt: 190.0
+- prompt_021.txt: 186.0
+- prompt_019.txt: 176.0
+- prompt_024.txt: 176.0
+- prompt_017.txt: 172.0
+- prompt_013.txt: 151.0
+- prompt_009.txt: 134.0
+- prompt_014.txt: 133.0
+- prompt_022.txt: 133.0
+- prompt_030.txt: 129.0
+- prompt_020.txt: 127.0
+- prompt_008.txt: 125.0
+- prompt_011.txt: 125.0
+- prompt_015.txt: 124.0
+- prompt_010.txt: 117.0
+- prompt_005.txt: 90.0
+- prompt_016.txt: 87.0
+- prompt_003.txt: 86.0
+- prompt_018.txt: 86.0
+- prompt_027.txt: 85.0
+- prompt_004.txt: 79.0
+- prompt_006.txt: 79.0
+- prompt_007.txt: 79.0
+- prompt_012.txt: 79.0
+- prompt_028.txt: 79.0
+- prompt_002.txt: 75.0
+- prompt_001.txt: 35.0
+
+**Average:** 216.9  |  **Max:** 360.0  |  **Min:** 35.0
+**Spread (1st-2nd):** +0.0
+
+### Observations
+- Auth/security is differentiating top prompts
+- Database/storage persistence separates elite prompts
+- Integration testing depth is a new frontier
+- Kubernetes/container orchestration adds ops readiness
+- Design patterns (factory, strategy) improve architecture
+- Circuit breaker pattern adds resilience
+- Background task/worker support for async operations
+- OpenAPI/Swagger documentation is emerging
+- Vision/multimodal model support is forward-looking
+- New scoring frontier: breaking past 250
+
+
+## Generation @ 2026-05-28 01:56
+Population size: 51
+
+**Best:** prompt_031.txt (360.0)
+
+### Rankings
+- prompt_031.txt: 360.0
+- prompt_034.txt: 360.0
+- prompt_035.txt: 360.0
+- prompt_037.txt: 360.0
+- prompt_038.txt: 360.0
+- prompt_039.txt: 360.0
+- prompt_040.txt: 360.0
+- prompt_041.txt: 360.0
+- prompt_042.txt: 360.0
+- prompt_043.txt: 360.0
+- prompt_045.txt: 360.0
+- prompt_047.txt: 360.0
+- prompt_048.txt: 360.0
+- prompt_049.txt: 360.0
+- prompt_050.txt: 360.0
+- prompt_051.txt: 360.0
+- prompt_033.txt: 330.0
+- prompt_036.txt: 325.0
+- prompt_046.txt: 325.0
+- prompt_044.txt: 324.0
+- prompt_029.txt: 300.0
+- prompt_032.txt: 256.0
+- prompt_025.txt: 226.0
+- prompt_026.txt: 222.0
+- prompt_023.txt: 190.0
+- prompt_021.txt: 186.0
+- prompt_019.txt: 176.0
+- prompt_024.txt: 176.0
+- prompt_017.txt: 172.0
+- prompt_013.txt: 151.0
+- prompt_009.txt: 134.0
+- prompt_014.txt: 133.0
+- prompt_022.txt: 133.0
+- prompt_030.txt: 129.0
+- prompt_020.txt: 127.0
+- prompt_008.txt: 125.0
+- prompt_011.txt: 125.0
+- prompt_015.txt: 124.0
+- prompt_010.txt: 117.0
+- prompt_005.txt: 90.0
+- prompt_016.txt: 87.0
+- prompt_003.txt: 86.0
+- prompt_018.txt: 86.0
+- prompt_027.txt: 85.0
+- prompt_004.txt: 79.0
+- prompt_006.txt: 79.0
+- prompt_007.txt: 79.0
+- prompt_012.txt: 79.0
+- prompt_028.txt: 79.0
+- prompt_002.txt: 75.0
+- prompt_001.txt: 35.0
+
+**Average:** 219.7  |  **Max:** 360.0  |  **Min:** 35.0
+**Spread (1st-2nd):** +0.0
+
+### Observations
+- Auth/security is differentiating top prompts
+- Database/storage persistence separates elite prompts
+- Integration testing depth is a new frontier
+- Kubernetes/container orchestration adds ops readiness
+- Design patterns (factory, strategy) improve architecture
+- Circuit breaker pattern adds resilience
+- Background task/worker support for async operations
+- OpenAPI/Swagger documentation is emerging
+- Vision/multimodal model support is forward-looking
+- New scoring frontier: breaking past 250
+
+
+## Generation @ 2026-05-28 01:56
+Population size: 52
+
+**Best:** prompt_031.txt (360.0)
+
+### Rankings
+- prompt_031.txt: 360.0
+- prompt_034.txt: 360.0
+- prompt_035.txt: 360.0
+- prompt_037.txt: 360.0
+- prompt_038.txt: 360.0
+- prompt_039.txt: 360.0
+- prompt_040.txt: 360.0
+- prompt_041.txt: 360.0
+- prompt_042.txt: 360.0
+- prompt_043.txt: 360.0
+- prompt_045.txt: 360.0
+- prompt_047.txt: 360.0
+- prompt_048.txt: 360.0
+- prompt_049.txt: 360.0
+- prompt_050.txt: 360.0
+- prompt_051.txt: 360.0
+- prompt_052.txt: 360.0
+- prompt_033.txt: 330.0
+- prompt_036.txt: 325.0
+- prompt_046.txt: 325.0
+- prompt_044.txt: 324.0
+- prompt_029.txt: 300.0
+- prompt_032.txt: 256.0
+- prompt_025.txt: 226.0
+- prompt_026.txt: 222.0
+- prompt_023.txt: 190.0
+- prompt_021.txt: 186.0
+- prompt_019.txt: 176.0
+- prompt_024.txt: 176.0
+- prompt_017.txt: 172.0
+- prompt_013.txt: 151.0
+- prompt_009.txt: 134.0
+- prompt_014.txt: 133.0
+- prompt_022.txt: 133.0
+- prompt_030.txt: 129.0
+- prompt_020.txt: 127.0
+- prompt_008.txt: 125.0
+- prompt_011.txt: 125.0
+- prompt_015.txt: 124.0
+- prompt_010.txt: 117.0
+- prompt_005.txt: 90.0
+- prompt_016.txt: 87.0
+- prompt_003.txt: 86.0
+- prompt_018.txt: 86.0
+- prompt_027.txt: 85.0
+- prompt_004.txt: 79.0
+- prompt_006.txt: 79.0
+- prompt_007.txt: 79.0
+- prompt_012.txt: 79.0
+- prompt_028.txt: 79.0
+- prompt_002.txt: 75.0
+- prompt_001.txt: 35.0
+
+**Average:** 222.4  |  **Max:** 360.0  |  **Min:** 35.0
+**Spread (1st-2nd):** +0.0
+
+### Observations
+- Auth/security is differentiating top prompts
+- Database/storage persistence separates elite prompts
+- Integration testing depth is a new frontier
+- Kubernetes/container orchestration adds ops readiness
+- Design patterns (factory, strategy) improve architecture
+- Circuit breaker pattern adds resilience
+- Background task/worker support for async operations
+- OpenAPI/Swagger documentation is emerging
+- Vision/multimodal model support is forward-looking
+- New scoring frontier: breaking past 250
+
