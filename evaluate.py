@@ -1275,6 +1275,66 @@ def evaluate_population():
             if "terragrunt" in content:
                 score += 2
 
+            
+            if "semantic web" in content:
+                score += 2
+
+            
+            if "data seed" in content or "seeding" in content:
+                score += 2
+
+            
+            if "alertmanager" in content:
+                score += 2
+
+            
+            if "inversion of control" in content or "ioc" in content:
+                score += 2
+
+            
+            if "notebook" in content:
+                score += 2
+
+            
+            if "trpc" in content:
+                score += 2
+
+            
+            if "minio" in content or "s3" in content or "object storage" in content:
+                score += 2
+
+            
+            if "sendgrid" in content:
+                score += 2
+
+            
+            if "discord" in content:
+                score += 2
+
+            
+            if "hadoop" in content:
+                score += 2
+
+            
+            if "flit" in content:
+                score += 2
+
+            
+            if "jfrog" in content or "artifactory" in content:
+                score += 2
+
+            
+            if "vonage" in content:
+                score += 2
+
+            
+            if "pnpm" in content:
+                score += 2
+
+            
+            if "firestore" in content or "firebase" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     

@@ -43,10 +43,10 @@ graph TD
 ```mermaid
 xychart-beta
     title "Prompt Score Evolution Across Generations"
-    x-axis ["gen 1", "gen 3", "gen 8", "gen 10", "gen 15", "gen 20", "gen 30", "gen 40", "gen 59"]
-    y-axis "Score" 0 --> 500
-    bar [35, 90, 131, 140, 196, 236, 330, 422, 500]
-    line [35, 90, 131, 140, 196, 236, 330, 422, 500]
+    x-axis ["gen 1", "gen 3", "gen 8", "gen 15", "gen 30", "gen 50", "gen 60", "gen 70", "gen 79"]
+    y-axis "Score" 0 --> 600
+    bar [35, 90, 131, 196, 330, 422, 500, 550, 596]
+    line [35, 90, 131, 196, 330, 422, 500, 550, 596]
 ```
 
 ### Components
