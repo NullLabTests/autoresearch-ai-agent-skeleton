@@ -1,11 +1,9 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/status-active-success" alt="Status">
-  <img src="https://img.shields.io/github/license/NullLabTests/autoresearch-ai-agent-skeleton" alt="License">
-  <img src="https://img.shields.io/badge/python-3.12%2B-blue" alt="Python">
-  <img src="https://img.shields.io/badge/generations-33-blueviolet" alt="Generations">
-  <img src="https://img.shields.io/badge/best_score-422%2F500-brightgreen" alt="Best Score">
-  <img src="https://img.shields.io/badge/population-33%20prompts-orange" alt="Population">
-</p>
+![](https://img.shields.io/badge/status-active-success)
+![](https://img.shields.io/badge/license-MIT-67ac09)
+![](https://img.shields.io/badge/python-3.12%2b-007ec6)
+![](https://img.shields.io/badge/generations-33-blueviolet)
+![](https://img.shields.io/badge/score-422%2f500-brightgreen)
+![](https://img.shields.io/badge/population-33%20prompts-orange)
 
 # AutoResearch AI Agent Skeleton
 
