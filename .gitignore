@@ -36,3 +36,4 @@ htmlcov/
 results.log
 *.db
 *.sqlite
+generated/
