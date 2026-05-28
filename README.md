@@ -102,11 +102,17 @@ git clone https://github.com/NullLabTests/autoresearch-ai-agent-skeleton.git
 cd autoresearch-ai-agent-skeleton
 
 # Run a single evaluation on the current prompt
-python eval.py
+python eval.py --prompt prompt.txt
 
-# Or run the full evolutionary loop (Linux/macOS)
+# Run the full evolutionary loop
 chmod +x run_evolution.sh
 ./run_evolution.sh
+
+# Advanced: auto-evolution with signal injection
+python auto_evolve.py 50
+
+# Aggressive: inject 400+ deep signals across 200+ cycles
+python evolve_forever.py 200
 ```
 
 ### Using with OpenCode or Cursor

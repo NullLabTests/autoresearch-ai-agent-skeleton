@@ -1515,6 +1515,66 @@ def evaluate_population():
             if "azure" in content:
                 score += 2
 
+            
+            if "functools" in content:
+                score += 2
+
+            
+            if "axe" in content or "lighthouse" in content or "pa11y" in content:
+                score += 2
+
+            
+            if "partial" in content:
+                score += 2
+
+            
+            if "rfcs" in content or "rfc" in content:
+                score += 2
+
+            
+            if "lambda layer" in content:
+                score += 2
+
+            
+            if "gitbook" in content:
+                score += 2
+
+            
+            if "audio" in content and ("transcribe" in content or "speech" in content):
+                score += 2
+
+            
+            if "cls" in content or "cumulative layout" in content:
+                score += 2
+
+            
+            if "geospatial" in content or "gis" in content or "postgis" in content:
+                score += 2
+
+            
+            if "push notification" in content or "fcm" in content or "apns" in content:
+                score += 2
+
+            
+            if "prototype" in content:
+                score += 2
+
+            
+            if "clean architecture" in content:
+                score += 2
+
+            
+            if "visual regression" in content or "percy" in content or "chromatic" in content:
+                score += 2
+
+            
+            if "core web vitals" in content or "web vitals" in content:
+                score += 2
+
+            
+            if "cypress" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
