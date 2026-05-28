@@ -105,7 +105,6 @@ cd autoresearch-ai-agent-skeleton
 python eval.py
 
 # Or run the full evolutionary loop (Linux/macOS)
-cd autoresearch-ai-agent-skeleton
 chmod +x run_evolution.sh
 ./run_evolution.sh
 ```
