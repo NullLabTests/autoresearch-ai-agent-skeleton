@@ -1635,6 +1635,126 @@ def evaluate_population():
             if "builder" in content:
                 score += 2
 
+            
+            if "fly.io" in content or "flyio" in content:
+                score += 2
+
+            
+            if "visitor" in content:
+                score += 2
+
+            
+            if "postmark" in content:
+                score += 2
+
+            
+            if "feature store" in content or "feast" in content:
+                score += 2
+
+            
+            if "i18n" in content or "internationalization" in content:
+                score += 2
+
+            
+            if "sms" in content:
+                score += 2
+
+            
+            if "poetry" in content:
+                score += 2
+
+            
+            if "scikit" in content or "sklearn" in content:
+                score += 2
+
+            
+            if "inventory" in content:
+                score += 2
+
+            
+            if "microservice" in content or "micro-service" in content:
+                score += 2
+
+            
+            if "testcontainers" in content:
+                score += 2
+
+            
+            if "typesense" in content:
+                score += 2
+
+            
+            if "abac" in content or "attribute-based" in content:
+                score += 2
+
+            
+            if "django admin" in content:
+                score += 2
+
+            
+            if "model registry" in content:
+                score += 2
+
+            
+            if "qr code" in content or "barcode" in content:
+                score += 2
+
+            
+            if "chunked upload" in content or "resumable upload" in content:
+                score += 2
+
+            
+            if "algolia" in content:
+                score += 2
+
+            
+            if "kubeflow" in content:
+                score += 2
+
+            
+            if "auth0" in content:
+                score += 2
+
+            
+            if "coap" in content:
+                score += 2
+
+            
+            if "graceful shutdown" in content and ("sigterm" in content or "sigint" in content or "sigusr" in content):
+                score += 2
+
+            
+            if "commitlint" in content or "commitizen" in content:
+                score += 2
+
+            
+            if "opentofu" in content:
+                score += 2
+
+            
+            if "seo" in content or "structured data" in content:
+                score += 2
+
+            
+            if "prefect" in content:
+                score += 2
+
+            
+            if "dark mode" in content or "theme" in content:
+                score += 2
+
+            
+            if "rabbitmq" in content or "amqp" in content:
+                score += 2
+
+            
+            if "loggly" in content:
+                score += 2
+
+            
+            if "vercel" in content or "netlify" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
