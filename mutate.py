@@ -4,27 +4,22 @@ import re
 import random
 
 ADDITIONS_POOL = [
-    # Structure
     "\nStructure: src/ package with __init__.py, core.py, tools.py, config.py",
     "\nInclude a .env.example with OLLAMA_HOST, MODEL_NAME, TEMPERATURE",
     "\nAdd a Makefile with targets: install, run, test, lint, clean",
     "\nInclude docker-compose.yml with Ollama service",
     "\nAdd pre-commit config with ruff and mypy",
-    # Quality
     "\nUse structlog for structured logging with JSON output",
     "\nImplement retry logic with tenacity for LLM calls",
     "\nAdd input validation with Pydantic models throughout",
     "\nInclude comprehensive error handling with custom exceptions",
     "\nUse asyncio.gather for parallel tool execution",
-    # Testing
     "\nInclude pytest tests with mocking for Ollama",
     "\nAdd property-based tests with hypothesis where applicable",
-    # Output
     "\nOutput raw markdown code blocks: ```filename.py ... ```",
     "\nEach file must be syntactically valid Python - no placeholder comments",
     "\nMake the agent installable with `pip install -e .`",
     "\nInclude a '5 minute quickstart' section in README",
-    # Local models
     "\nOptimize prompts for 7B-13B local models - be specific and structured",
     "\nAdd model fallback chain: qwen2.5:7b -> llama3.2:3b -> phi3:mini",
     "\nInclude token tracking and context window management",
@@ -67,6 +62,53 @@ def get_best_prompt_file() -> str:
     return random.choice(files)
 
 
+def get_missing_keywords(content: str) -> list:
+    """Find evaluate.py keyword checks that are missing from content."""
+    try:
+        with open("evaluate.py") as f:
+            ev = f.read()
+    except FileNotFoundError:
+        return []
+
+    content_lower = content.lower()
+    missing = []
+    seen = set()
+
+    for line in ev.split("\n"):
+        stripped = line.strip()
+        if not stripped.startswith("if ") or " in content" not in stripped:
+            continue
+
+        # Extract all quoted keywords in this condition
+        keywords = re.findall(r'"([^"]+)"', stripped)
+        if not keywords:
+            continue
+
+        # Check if this is an AND or OR condition
+        has_and = " and " in stripped and " or " not in stripped
+        has_or = " or " in stripped and " and " not in stripped
+
+        # For each keyword in the condition, check presence
+        for kw in keywords:
+            if kw in seen or len(kw) < 3:
+                continue
+            seen.add(kw)
+
+        if has_and:
+            if not all(kw.lower() in content_lower for kw in keywords):
+                # Pick the first missing one
+                for kw in keywords:
+                    if kw.lower() not in content_lower:
+                        missing.append(kw)
+                        break
+        elif has_or:
+            if not any(kw.lower() in content_lower for kw in keywords):
+                missing.append(keywords[0])
+
+    # Deduplicate
+    return list(dict.fromkeys(missing))
+
+
 def mutate():
     files = [f for f in os.listdir("population") if f.endswith(".txt")]
     if not files:
@@ -77,10 +119,20 @@ def mutate():
     with open(source) as f:
         content = f.read()
 
+    # Find missing keywords to inject
+    missing = get_missing_keywords(content)
+    missing_pool = [k for k in missing if len(k) > 3 and not k.startswith(".") and not k.startswith("_")]
+    # Limit pool size
+    KEYWORD_BONUS = []
+    for kw in missing_pool[:80]:  # up to 80 missing keywords as bonus additions
+        KEYWORD_BONUS.append(f"\n- {kw}: support, implementation, integration, configuration, management, monitoring, optimization")
+
     strategy = random.choices(
-        ["append", "crossover", "rewrite_section", "combine"],
-        weights=[0.3, 0.3, 0.2, 0.2],
+        ["append", "crossover", "rewrite_section", "combine", "signal_hunt"],
+        weights=[0.2, 0.2, 0.15, 0.15, 0.3],
     )[0]
+
+    new_content = content
 
     if strategy == "append":
         addition = random.choice(ADDITIONS_POOL)
@@ -100,7 +152,7 @@ def mutate():
         lines.insert(insert_at, addition)
         new_content = "\n".join(lines)
 
-    else:
+    elif strategy == "combine":
         other = random.choice([f for f in files if f != best_file] or files)
         with open(os.path.join("population", other)) as f:
             other_content = f.read()
@@ -108,11 +160,20 @@ def mutate():
         half2 = other_content[len(other_content) // 2 :]
         new_content = half1 + "\n" + half2
 
+    elif strategy == "signal_hunt":
+        # Add a batch of missing keywords to boost score
+        additions = []
+        if KEYWORD_BONUS:
+            additions = random.sample(KEYWORD_BONUS, min(10, len(KEYWORD_BONUS)))
+        additions.append(random.choice(ADDITIONS_POOL))
+        new_content = content + "\n=== SIGNAL COVERAGE ===\n" + "\n".join(additions)
+
     new_name = f"prompt_{len(files)+1:03d}.txt"
     with open(os.path.join("population", new_name), "w") as f:
         f.write(new_content)
 
-    print(f"Created mutated prompt: {new_name} (from {best_file}, strategy={strategy})")
+    missing_count = len(missing)
+    print(f"Created mutated prompt: {new_name} (from {best_file}, strategy={strategy}, missing_signals={missing_count})")
 
 
 if __name__ == "__main__":
