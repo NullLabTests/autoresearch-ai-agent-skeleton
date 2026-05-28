@@ -714,6 +714,27 @@ def evaluate_population():
             
             if "asyncio.semaphore" in content or "asyncio.Semaphore" in content:
                 score += 2
+            
+            if "entry_point" in content or "console_script" in content:
+                score += 2
+            
+            if "c4" in content and ("model" in content or "diagram" in content):
+                score += 2
+            
+            if "sharding" in content or "shard" in content:
+                score += 2
+            
+            if "pod security" in content or "psp" in content or "psa" in content:
+                score += 2
+            
+            if "readonly" in content and ("rootfs" in content or "filesystem" in content):
+                score += 2
+            
+            if "golden" in content and ("file" in content or "test" in content):
+                score += 2
+            
+            if "securitycontext" in content or "security context" in content:
+                score += 2
             scores[f] = round(min(500.0, score), 1)
             print(f"{f}: {scores[f]}")
     
