@@ -205,7 +205,7 @@ def get_current_scores() -> list:
             if ">=" in content and "0" in content: s += 1
             if re.search(r'>=\s*\d+\.\d+\.\d+', content): s += 2
 
-            scores.append((f, round(min(500, s), 1)))
+            scores.append((f, round(min(1000, s), 1)))
     return scores
 
 
