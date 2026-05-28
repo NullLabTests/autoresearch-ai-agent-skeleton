@@ -735,6 +735,66 @@ def evaluate_population():
             
             if "securitycontext" in content or "security context" in content:
                 score += 2
+            
+            if "langchain" in content:
+                score += 2
+
+            
+            if "a/b test" in content or "ab test" in content:
+                score += 2
+
+            
+            if "clerk" in content:
+                score += 2
+
+            
+            if "edge caching" in content:
+                score += 2
+
+            
+            if "webgpu" in content:
+                score += 2
+
+            
+            if "appdynamics" in content or "appdynamics" in content:
+                score += 2
+
+            
+            if "pci" in content or "pci dss" in content:
+                score += 2
+
+            
+            if "cloudflare" in content or "cloudflare workers" in content:
+                score += 2
+
+            
+            if "supabase" in content or "neon" in content or "planetscale" in content:
+                score += 2
+
+            
+            if "consul" in content:
+                score += 2
+
+            
+            if "itertools" in content:
+                score += 2
+
+            
+            if "content negotiation" in content:
+                score += 2
+
+            
+            if "yarn" in content and ("berry" in content or "pnp" in content):
+                score += 2
+
+            
+            if "twilio" in content:
+                score += 2
+
+            
+            if "webpush" in content or "web push" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
