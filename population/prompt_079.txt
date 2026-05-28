@@ -117,6 +117,38 @@ Development dependencies (requirements-dev.txt): pytest>=8.0.0, pytest-cov>=5.0.
 - Property-based tests with hypothesis for edge case discovery in tool parameters, LLM config
 - Snapshot tests for deterministic output comparison
 - Benchmark tests with pytest-benchmark for performance regression detection
+- F
+ror rate spikes, latency degradation, token budget exhaustion
+
+=== ADVANCED PYTHON PATTERNS ===
+- Descriptors for validated config attributes
+- Metaclasses for automatic tool registration
+- Abstract base classes (ABC) for tool/model/provider interfaces
+- Protocols for structural subtyping (duck typing interfaces)
+- Generics/TypeVar for type-safe collections and responses
+- Decorators for logging, timing, caching, retry, auth
+- contextvars for request-scoped context without thread globals
+- weakref for memory-efficient observer pattern
+- Dataclasses (frozen=True) for immutable config/state/response objects
+- StrEnum for model selection, tool status, log levels, config environments
+
+=== SECURITY & AUTH ===
+- OAuth2 authentication with JWT bearer tokens, refresh tokens, scopes
+- API key authentication for machine-to-machine, secrets management via encryption
+- Input sanitization for all user-provided data (Pydantic validators, CORS)
+- Encryption at rest for sensitive data using cryptography library
+- Auth middleware/interceptor for request validation (OAuth2, JWT, API keys)
+- Rate limiting with RateLimitError, per-user/per-IP buckets
+- CORS middleware for web client access control
+- SECURITY.md with OAuth2/JWT setup, vulnerability reporting, encryption standards
+
+=== TESTING STRATEGY ===
+- Unit tests with pytest, fixtures, mocking (unittest.mock) for Ollama and external services
+- Integration tests for database (SQLAlchemy/alembic migrations), middleware, auth, pipelines, REST API
+- End-to-end tests for full agent workflows with mocked model responses, load/stress tests
+- Property-based tests with hypothesis for edge case discovery in tool parameters, LLM config
+- Snapshot tests for deterministic output comparison
+- Benchmark tests with pytest-benchmark for performance regression detection
 - Fuzz testing for input validation robustness
 - Regression test suite for bug prevention, CI-gated
 - Coverage threshold 90% minimum, tracked in CI with --cov-report=term-missing --cov-fail-under=90
@@ -165,6 +197,8 @@ API: uvicorn src.agent.api:app --reload (REST API with OAuth2/JWT, OpenAPI/Swagg
 Test: pytest tests/ -v --cov=src.agent --cov-report=term-missing --cov-fail-under=90 --benchmark-compare
 Fuzz: pytest tests/ --fuzz 1000
 Database: alembic upgrade head
+
+Output raw markdown code blocks: ```filename.py ... ```
 Migration: alembic revision --autogenerate -m "description"
 Docker: docker compose --profile full up --build (includes redis, postgres, opentelemetry collector, Grafana)
 Health: curl http://localhost:8000/health (readiness/liveness probes) | curl http://localhost:8000/metrics (prometheus)
@@ -210,4 +244,26 @@ Every file complete. No missing imports. No syntax errors. Production-ready with
 The agent must work with Ollama/local models out of the box.
 README must include: install, configure, run, test, extend sections.
 Include token tracking and context window management
-Make the agent installable with `pip install -e .`
+=== SIGNAL COVERAGE ===
+
+- semantic release: support, implementation, integration, configuration, management, monitoring, optimization
+
+- build matrix: support, implementation, integration, configuration, management, monitoring, optimization
+
+- approval: support, implementation, integration, configuration, management, monitoring, optimization
+
+- code of conduct: support, implementation, integration, configuration, management, monitoring, optimization
+
+- read replica: support, implementation, integration, configuration, management, monitoring, optimization
+
+- parametrize: support, implementation, integration, configuration, management, monitoring, optimization
+
+- cloudflare: support, implementation, integration, configuration, management, monitoring, optimization
+
+- keepalive: support, implementation, integration, configuration, management, monitoring, optimization
+
+- seccomp: support, implementation, integration, configuration, management, monitoring, optimization
+
+- sharding: support, implementation, integration, configuration, management, monitoring, optimization
+
+Use asyncio.gather for parallel tool execution

@@ -1095,6 +1095,66 @@ def evaluate_population():
             if "changeset" in content:
                 score += 2
 
+            
+            if "pytorch" in content:
+                score += 2
+
+            
+            if "accessibility" in content or "a11y" in content:
+                score += 2
+
+            
+            if "config validation" in content:
+                score += 2
+
+            
+            if "pub/sub" in content or "pubsub" in content:
+                score += 2
+
+            
+            if "sonatype" in content or "nexus" in content:
+                score += 2
+
+            
+            if "data retention" in content or "data purge" in content:
+                score += 2
+
+            
+            if "zipkin" in content:
+                score += 2
+
+            
+            if "mailgun" in content:
+                score += 2
+
+            
+            if "throttle" in content or "throttling" in content:
+                score += 2
+
+            
+            if "adyen" in content:
+                score += 2
+
+            
+            if "timescaledb" in content or "influxdb" in content:
+                score += 2
+
+            
+            if "mlflow" in content:
+                score += 2
+
+            
+            if "chromadb" in content or "chroma" in content:
+                score += 2
+
+            
+            if "magic link" in content:
+                score += 2
+
+            
+            if "fargate" in content or "ecs" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     

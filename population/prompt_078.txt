@@ -165,6 +165,8 @@ API: uvicorn src.agent.api:app --reload (REST API with OAuth2/JWT, OpenAPI/Swagg
 Test: pytest tests/ -v --cov=src.agent --cov-report=term-missing --cov-fail-under=90 --benchmark-compare
 Fuzz: pytest tests/ --fuzz 1000
 Database: alembic upgrade head
+
+Output raw markdown code blocks: ```filename.py ... ```
 Migration: alembic revision --autogenerate -m "description"
 Docker: docker compose --profile full up --build (includes redis, postgres, opentelemetry collector, Grafana)
 Health: curl http://localhost:8000/health (readiness/liveness probes) | curl http://localhost:8000/metrics (prometheus)
@@ -185,8 +187,6 @@ Systemd: sudo systemctl start agent (graceful shutdown on stop/reload)
 - Terraform/Pulumi/IaC for infrastructure, Ansible/Chef/Puppet for config management, Helm charts for k8s packaging
 - ArgoCD/Flux GitOps delivery, service accounts, ingress/load balancer config, ConfigMap/Secret management
 - AsyncAPI/async api spec for event-driven APIs, protobuf/gRPC proto definitions, GraphQL schema/resolver/query
-
-Include token tracking and context window management
 - OLAP/OLTP data processing, data warehouse/lake/mart, Redshift/BigQuery/Snowflake/Clickhouse
 - Chaos engineering for resilience testing, disaster recovery DR plan, backup/restore procedures
 - Span trace parent for distributed tracing, metrics histogram/counter/gauge/summary, Grafana dashboard/datasource/panel
@@ -212,3 +212,99 @@ Every file complete. No missing imports. No syntax errors. Production-ready with
 The agent must work with Ollama/local models out of the box.
 README must include: install, configure, run, test, extend sections.
 Include token tracking and context window management
+=== SIGNAL COVERAGE ===
+
+- semantic release: support, implementation, integration, configuration, management, monitoring, optimization
+
+- build matrix: support, implementation, integration, configuration, management, monitoring, optimization
+
+- approval: support, implementation, integration, configuration, management, monitoring, optimization
+
+- code of conduct: support, implementation, integration, configuration, management, monitoring, optimization
+
+- read replica: support, implementation, integration, configuration, management, monitoring, optimization
+
+- parametrize: support, implementation, integration, configuration, management, monitoring, optimization
+
+- cloudflare: support, implementation, integration, configuration, management, monitoring, optimization
+
+- keepalive: support, implementation, integration, configuration, management, monitoring, optimization
+
+- seccomp: support, implementation, integration, configuration, management, monitoring, optimization
+
+- sharding: support, implementation, integration, configuration, management, monitoring, optimization
+
+Use asyncio.gather for parallel tool execution
+Output every file in ```filename language code blocks.
+=== SIGNAL COVERAGE ===
+
+- compression: support, implementation, integration, configuration, management, monitoring, optimization
+
+- webxr: support, implementation, integration, configuration, management, monitoring, optimization
+
+- content-type: support, implementation, integration, configuration, management, monitoring, optimization
+
+- preload: support, implementation, integration, configuration, management, monitoring, optimization
+
+- webpush: support, implementation, integration, configuration, management, monitoring, optimization
+
+- a/b test: support, implementation, integration, configuration, management, monitoring, optimization
+
+- bulkhead: support, implementation, integration, configuration, management, monitoring, optimization
+
+- hsts: support, implementation, integration, configuration, management, monitoring, optimization
+
+- entry_point: support, implementation, integration, configuration, management, monitoring, optimization
+
+- securitycontext: support, implementation, integration, configuration, management, monitoring, optimization
+
+Structure: src/ package with __init__.py, core.py, tools.py, config.py
+=== SIGNAL COVERAGE ===
+
+- asyncio.lock: support, implementation, integration, configuration, management, monitoring, optimization
+
+- asyncio.semaphore: support, implementation, integration, configuration, management, monitoring, optimization
+
+- asyncio.queue: support, implementation, integration, configuration, management, monitoring, optimization
+
+- healthz: support, implementation, integration, configuration, management, monitoring, optimization
+
+- contributing: support, implementation, integration, configuration, management, monitoring, optimization
+
+- pod security: support, implementation, integration, configuration, management, monitoring, optimization
+
+- ambassador: support, implementation, integration, configuration, management, monitoring, optimization
+
+- distributed lock: support, implementation, integration, configuration, management, monitoring, optimization
+
+- non-root: support, implementation, integration, configuration, management, monitoring, optimization
+
+- sequence diagram: support, implementation, integration, configuration, management, monitoring, optimization
+
+Add a Makefile with targets: install, run, test, lint, clean
+=== SIGNAL COVERAGE ===
+
+- cassandra: support, implementation, integration, configuration, management, monitoring, optimization
+
+- metabase: support, implementation, integration, configuration, management, monitoring, optimization
+
+- step function: support, implementation, integration, configuration, management, monitoring, optimization
+
+- ip whitelist: support, implementation, integration, configuration, management, monitoring, optimization
+
+- webassembly: support, implementation, integration, configuration, management, monitoring, optimization
+
+- json-ld: support, implementation, integration, configuration, management, monitoring, optimization
+
+- sigNoz: support, implementation, integration, configuration, management, monitoring, optimization
+
+- tree shaking: support, implementation, integration, configuration, management, monitoring, optimization
+
+- geolocation: support, implementation, integration, configuration, management, monitoring, optimization
+
+- edge function: support, implementation, integration, configuration, management, monitoring, optimization
+
+Add model fallback chain: qwen2.5:7b -> llama3.2:3b -> phi3:mini
+Use: LangGraph for orchestration, Ollama for inference, Pydantic for validation.
+Structure: src/ package with __init__.py, core.py, tools.py, config.py
+Add model fallback chain: qwen2.5:7b -> llama3.2:3b -> phi3:mini
