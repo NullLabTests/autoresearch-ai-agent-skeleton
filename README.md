@@ -1,100 +1,100 @@
-![](https://img.shields.io/badge/status-active-success)
-![](https://img.shields.io/badge/license-MIT-67ac09)
-![](https://img.shields.io/badge/python-3.12+-007ec6)
-![](https://img.shields.io/badge/generations-59-blueviolet)
-![](https://img.shields.io/badge/score-500%2f500-brightgreen)
-![](https://img.shields.io/badge/population-59%20prompts-orange)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/status-active-success?style=for-the-badge&logo=github&logoColor=white&labelColor=333">
+    <img alt="status" src="https://img.shields.io/badge/status-active-success?style=for-the-badge&logo=github&logoColor=white&labelColor=eee">
+  </picture>
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-67ac09?style=for-the-badge">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.12%2B-007ec6?style=for-the-badge&logo=python&logoColor=white">
+  <img alt="Generations" src="https://img.shields.io/badge/Generations-59-blueviolet?style=for-the-badge">
+  <img alt="Score" src="https://img.shields.io/badge/Best%20Score-500%2F500-brightgreen?style=for-the-badge">
+  <img alt="Population" src="https://img.shields.io/badge/Population-59%20prompts-orange?style=for-the-badge">
+</p>
 
-# AutoResearch AI Agent Skeleton
+<h1 align="center">🧬 AutoResearch AI Agent Skeleton</h1>
+<p align="center"><strong>Evolutionary prompt optimization for AI agent code generation.</strong></p>
 
-**Evolutionary prompt optimization for AI agent code generation.**
+---
 
-This project uses a genetic algorithm to automatically evolve prompts that generate better and better AI agent project skeletons. Starting from a simple seed prompt, it iteratively mutates, evaluates, and selects the fittest prompts — treating prompt engineering as a search problem rather than a manual craft.
+This project uses a **genetic algorithm** to automatically evolve prompts that generate better and better AI agent project skeletons. Starting from a simple seed prompt, it iteratively mutates, evaluates, and selects the fittest prompts — treating prompt engineering as a **search problem** rather than a manual craft.
 
-## How It Works
+## 🔬 How It Works
 
-The system implements a **"modify → evaluate → keep/revert"** loop, inspired by [Andrej Karpathy's `autoresearch`](https://github.com/karpathy/autoresearch) project. Karpathy's original concept applied this loop to autonomously improve training code. We borrowed the core idea and applied it to **evolving AI agent prompts** instead.
+The system implements a **"modify → evaluate → keep/revert"** loop, inspired by [Andrej Karpathy's `autoresearch`](https://github.com/karpathy/autoresearch). We applied the same principle to **evolving AI agent prompts** instead of training code.
 
 ### The Evolutionary Loop
 
+```mermaid
+graph TD
+    P["🧬 Population<br/>(59 prompts)"] --> M["✂️ mutate.py<br/>crossover / append / rewrite"]
+    M --> E["📊 evaluate.py<br/>200+ quality signals"]
+    E --> R["📝 reflect.py<br/>rank, observe, persist"]
+    R --> S["🏆 Select best →<br/>repeat (gen++)"]
+    S --> P
+
+    style P fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#fff
+    style M fill:#16213e,stroke:#0f3460,stroke-width:2px,color:#fff
+    style E fill:#16213e,stroke:#0f3460,stroke-width:2px,color:#fff
+    style R fill:#16213e,stroke:#0f3460,stroke-width:2px,color:#fff
+    style S fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#fff
 ```
-               ┌─────────────────┐
-               │   Population    │
-               │  (59 prompts)   │
-               └────────┬────────┘
-                        │
-                        ▼
-               ┌─────────────────┐
-               │    mutate.py    │
-               │  (crossover /   │
-               │   append /      │
-               │   rewrite)      │
-               └────────┬────────┘
-                        │
-                        ▼
-               ┌─────────────────┐
-               │   evaluate.py   │
-               │  (200+ quality  │
-               │    signals)     │
-               └────────┬────────┘
-                        │
-                        ▼
-               ┌─────────────────┐
-               │   reflect.py    │
-               │  (rank, observe,│
-               │   persist)      │
-               └────────┬────────┘
-                        │
-                        ▼
-               ┌─────────────────┐
-               │  Select best →  │
-               │  repeat (gen++) │
-               └─────────────────┘
+
+### Score Progression
+
+```mermaid
+xychart-beta
+    title "Prompt Score Evolution Across Generations"
+    x-axis ["gen 1", "gen 3", "gen 8", "gen 10", "gen 15", "gen 20", "gen 30", "gen 40", "gen 59"]
+    y-axis "Score" 0 --> 500
+    bar [35, 90, 131, 140, 196, 236, 330, 422, 500]
+    line [35, 90, 131, 140, 196, 236, 330, 422, 500]
 ```
 
 ### Components
 
 | File | Purpose |
 |------|---------|
-| `mutate.py` | Creates new prompt variants from the best current prompt using four strategies: append (add a new instruction), crossover (merge with another prompt), rewrite_section (insert mid-prompt), and combine (splice halves of two prompts). |
-| `evaluate.py` | Scores each prompt against 200+ quality signals across categories: tech stack, code quality, testing depth, security, performance, documentation, deployment, design patterns, and more. Scores range from 35 (basic) to 500 (production-grade). |
-| `reflect.py` | Records each generation's rankings, computes statistics (average, spread, min/max), and extracts observations about what differentiates elite prompts. All data persists to `reflection.md` (now 2400+ lines of evolution history). |
-| `run_evolution.sh` | Orchestrates the full loop: mutate → evaluate → reflect → commit → repeat. Run it and let evolution do the rest. |
-| `prompt.txt` | The seed prompt used in the top-level outer loop (simple eval-only system). |
-| `program.md` | Instructions for running the optimization loop with OpenCode or Cursor. |
+| `mutate.py` | Creates new prompt variants using four genetic strategies |
+| `evaluate.py` | Scores each prompt against 200+ quality signals |
+| `reflect.py` | Records rankings, statistics, and observations |
+| `run_evolution.sh` | Orchestrates the full automate loop: mutate → evaluate → reflect → commit |
+| `auto_evolve.py` | Extended evolution with adaptive signal injection |
+| `eval.py` | Quick single-prompt evaluator (outer loop) |
+| `prompt.txt` | Seed prompt for the outer loop |
 
 ### Mutation Strategies
 
-1. **Append (30%)** — Adds a random quality-improving instruction to the end of the best prompt
-2. **Crossover (30%)** — Merges a chunk from another prompt into the best prompt
-3. **Rewrite Section (20%)** — Inserts a new instruction at a random position in the prompt
-4. **Combine (20%)** — Splices the first half of the best prompt with the second half of another
+| Strategy | Weight | Description |
+|----------|--------|-------------|
+| **Append** | 30% | Adds a random quality-improving instruction to the end |
+| **Crossover** | 30% | Merges a chunk from another prompt into the current best |
+| **Rewrite Section** | 20% | Inserts a new instruction at a random position |
+| **Combine** | 20% | Splices the first half of the best prompt with the second half of another |
 
-## Current Status
+## 📈 Current Status
 
 - **Latest Generation:** 59
 - **Population Size:** 59 prompts
 - **Best Score:** 500/500 (ceiling reached)
-- **Prompts at Ceiling:** 24 prompts have hit the max score
+- **Prompts at Ceiling:** 24 of 59 prompts score max
 - **Score Progression:** 35 → 86 → 92 → 140 → 196 → 286 → 330 → 422 → 500
 
-The system has **saturated the scoring ceiling** — 24 of 59 prompts now score the maximum 500 points. The next frontier is evolving the evaluation function itself to score for deeper qualities.
+The system has **saturated the scoring ceiling**. The next frontier is evolving the evaluation function itself to score for deeper qualities.
 
-The best prompts generate production-ready agent projects with:
-- Full `src/package/` layout with 20+ modules
-- LangGraph ReAct loop + Ollama local models
-- Pydantic v2 config, validation, type hints everywhere
-- Async/await, streaming, SSE/websocket support
-- OpenTelemetry + Prometheus + Grafana observability
-- OAuth2/JWT auth, rate limiting, encryption
-- pytest with hypothesis, snapshot, benchmark, fuzz testing
-- Docker, docker-compose, Kubernetes, systemd deployment
-- Design patterns: factory, strategy, observer, repository, pipeline
-- CI/CD with GitHub Actions + dependabot + pre-commit
+> What elite prompts generate:
+> - Full `src/package/` layout with 20+ modules
+> - LangGraph ReAct loop + Ollama local models
+> - Pydantic v2 config, validation, type hints everywhere
+> - Async/await, streaming, SSE/websocket support
+> - OpenTelemetry + Prometheus + Grafana observability
+> - OAuth2/JWT auth, rate limiting, encryption
+> - pytest property-based, snapshot, benchmark, fuzz testing
+> - Docker, docker-compose, Kubernetes, systemd deployment
+> - Design patterns: factory, strategy, observer, repository, pipeline
+> - CI/CD with GitHub Actions + dependabot + pre-commit
 
-[View full evolution history →](reflection.md)
+📖 [View full evolution history →](reflection.md)
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 # Clone the repo
@@ -117,9 +117,9 @@ chmod +x run_evolution.sh
 4. If score goes up → commit. If down → revert.
 5. Repeat.
 
-(See `program.md` for detailed instructions.)
+📘 See [`program.md`](program.md) for detailed instructions.
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 autoresearch-ai-agent-skeleton/
@@ -140,14 +140,14 @@ autoresearch-ai-agent-skeleton/
 └── .gitignore
 ```
 
-## Why This Matters
+## 💡 Why This Matters
 
 Prompt engineering is usually a manual, trial-and-error process. This project treats it as a **search problem** — let the computer try thousands of variations, keep what works, discard what doesn't, and let the population evolve toward better solutions. No human intuition required, just a good fitness function and enough generations.
 
-## Credits
+## 🙏 Credits
 
-This project is inspired by [Andrej Karpathy's `autoresearch`](https://github.com/karpathy/autoresearch), which introduced the elegant "modify → evaluate → keep/revert" loop for autonomous code improvement. We applied the same principle to the domain of prompt engineering — evolving prompts instead of training code.
+Inspired by [Andrej Karpathy's `autoresearch`](https://github.com/karpathy/autoresearch), which introduced the elegant "modify → evaluate → keep/revert" loop for autonomous code improvement.
 
-## License
+## 📄 License
 
 MIT — see [LICENSE](LICENSE) for details.
