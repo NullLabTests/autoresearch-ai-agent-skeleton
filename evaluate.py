@@ -1455,6 +1455,66 @@ def evaluate_population():
             if "circleci" in content or "circle ci" in content:
                 score += 2
 
+            
+            if "contextlib" in content:
+                score += 2
+
+            
+            if "event driven" in content or "event-driven" in content:
+                score += 2
+
+            
+            if "pdoc" in content:
+                score += 2
+
+            
+            if "sqs" in content or "snss" in content:
+                score += 2
+
+            
+            if "kotlin" in content or "jetpack" in content:
+                score += 2
+
+            
+            if "model context protocol" in content or "mcp" in content:
+                score += 2
+
+            
+            if "sidecar" in content:
+                score += 2
+
+            
+            if "blockchain" in content:
+                score += 2
+
+            
+            if "yaml" in content:
+                score += 2
+
+            
+            if "smoke test" in content:
+                score += 2
+
+            
+            if "aws lambda" in content or "lambda function" in content:
+                score += 2
+
+            
+            if "react native" in content or "reactnative" in content:
+                score += 2
+
+            
+            if "webrtc" in content:
+                score += 2
+
+            
+            if "crewai" in content or "crew" in content:
+                score += 2
+
+            
+            if "azure" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
