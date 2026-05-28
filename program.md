@@ -48,10 +48,9 @@ Keep going for many iterations. Each generation brings you closer to the optimal
 
 ## Automated Evolution
 
-For a fully automated version (no human needed), see the [core evolution system](autoresearch-ai-agent-skeleton/). It uses a genetic algorithm with mutation, crossover, and selection — no manual editing required.
+For a fully automated version (no human needed), use `run_evolution.sh`. It uses a genetic algorithm with mutation, crossover, and selection — no manual editing required.
 
 ```bash
-cd autoresearch-ai-agent-skeleton
 chmod +x run_evolution.sh
 ./run_evolution.sh
 ```
