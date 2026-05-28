@@ -1995,6 +1995,54 @@ def evaluate_population():
             if "coroutine" in content:
                 score += 2
 
+            
+            if "ghcr" in content or "github container" in content:
+                score += 2
+
+            
+            if "standard version" in content or "standard-version" in content:
+                score += 2
+
+            
+            if "p2p" in content or "peer-to-peer" in content:
+                score += 2
+
+            
+            if "docker hub" in content or "docker registry" in content:
+                score += 2
+
+            
+            if "capacitor" in content or "ionic" in content:
+                score += 2
+
+            
+            if "meilisearch" in content:
+                score += 2
+
+            
+            if "lightstep" in content:
+                score += 2
+
+            
+            if "oci" in content or "oracle cloud" in content:
+                score += 2
+
+            
+            if "vuepress" in content or "vitepress" in content:
+                score += 2
+
+            
+            if "doctest" in content:
+                score += 2
+
+            
+            if "cdn" in content or "content delivery" in content:
+                score += 2
+
+            
+            if "rdf" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
