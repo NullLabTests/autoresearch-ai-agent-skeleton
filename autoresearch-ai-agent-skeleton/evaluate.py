@@ -606,6 +606,60 @@ def evaluate_population():
             if tech_mentions > 20: score += 3
             if tech_mentions > 30: score += 3
 
+            
+            if "sequence diagram" in content or "plantuml" in content or "mermaid" in content:
+                score += 2
+            
+            if "keepalive" in content or "keep alive" in content:
+                score += 2
+            
+            if "pprof" in content:
+                score += 2
+            
+            if "index" in content and ("database" in content or "sql" in content or "query" in content):
+                score += 2
+            
+            if "idle" in content and ("timeout" in content or "connection" in content):
+                score += 2
+            
+            if "healthz" in content or "readyz" in content or "livez" in content:
+                score += 2
+            
+            if "asyncio.lock" in content or "asyncio.Lock" in content:
+                score += 2
+            
+            if "code of conduct" in content or "conduct.md" in content:
+                score += 2
+            
+            if "connection string" in content or "dsn" in content:
+                score += 2
+            
+            if "conventional commit" in content:
+                score += 2
+            
+            if "parametrize" in content or "parameterize" in content:
+                score += 2
+            
+            if "debug" in content and ("endpoint" in content or "mode" in content or "profile" in content):
+                score += 2
+            
+            if "extras" in content and ("require" in content or "depend" in content):
+                score += 2
+            
+            if "compression" in content or "gzip" in content or "deflate" in content:
+                score += 2
+            
+            if "adr" in content or "architecture decision" in content:
+                score += 2
+            
+            if "audit" in content and ("log" in content or "trail" in content):
+                score += 2
+            
+            if "read replica" in content or "replica" in content:
+                score += 2
+            
+            if "bulkhead" in content or "bulk head" in content:
+                score += 2
             scores[f] = round(min(500.0, score), 1)
             print(f"{f}: {scores[f]}")
     
