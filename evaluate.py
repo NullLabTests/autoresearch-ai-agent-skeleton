@@ -1755,6 +1755,66 @@ def evaluate_population():
             if "vercel" in content or "netlify" in content:
                 score += 2
 
+            
+            if "iso 27001" in content:
+                score += 2
+
+            
+            if "vagrant" in content:
+                score += 2
+
+            
+            if "fuzzy search" in content or "fuzzy" in content:
+                score += 2
+
+            
+            if "file download" in content:
+                score += 2
+
+            
+            if "self-hosted" in content or "selfhosted" in content:
+                score += 2
+
+            
+            if "travis" in content or "travis ci" in content:
+                score += 2
+
+            
+            if "lazy load" in content or "lazy loading" in content:
+                score += 2
+
+            
+            if "onnx" in content:
+                score += 2
+
+            
+            if "full-text" in content or "fulltext" in content:
+                score += 2
+
+            
+            if "papertrail" in content:
+                score += 2
+
+            
+            if "braintree" in content:
+                score += 2
+
+            
+            if "puppeteer" in content:
+                score += 2
+
+            
+            if "code split" in content or "code splitting" in content:
+                score += 2
+
+            
+            if "codepipeline" in content or "codebuild" in content:
+                score += 2
+
+            
+            if "http/2" in content or "http2" in content or "http/3" in content or "http3" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
