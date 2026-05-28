@@ -1035,6 +1035,66 @@ def evaluate_population():
             if "sitemap" in content:
                 score += 2
 
+            
+            if "flask admin" in content or "sqladmin" in content:
+                score += 2
+
+            
+            if "file upload" in content:
+                score += 2
+
+            
+            if "admin panel" in content or "admin dashboard" in content:
+                score += 2
+
+            
+            if "pulsar" in content:
+                score += 2
+
+            
+            if "storybook" in content:
+                score += 2
+
+            
+            if "sparql" in content:
+                score += 2
+
+            
+            if "fluentd" in content or "fluentbit" in content:
+                score += 2
+
+            
+            if "mqtt" in content:
+                score += 2
+
+            
+            if "direnv" in content:
+                score += 2
+
+            
+            if "setup.py" in content:
+                score += 2
+
+            
+            if "zeromq" in content or "zmq" in content:
+                score += 2
+
+            
+            if "waf" in content or "web application firewall" in content:
+                score += 2
+
+            
+            if "saga" in content or "saga pattern" in content:
+                score += 2
+
+            
+            if "setup.cfg" in content:
+                score += 2
+
+            
+            if "changeset" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
