@@ -1335,6 +1335,66 @@ def evaluate_population():
             if "firestore" in content or "firebase" in content:
                 score += 2
 
+            
+            if "dynamodb" in content or "dynamo" in content:
+                score += 2
+
+            
+            if "lerna" in content:
+                score += 2
+
+            
+            if "data anonymization" in content or "anonymize" in content:
+                score += 2
+
+            
+            if "ccpa" in content:
+                score += 2
+
+            
+            if "monolith" in content or "modular monolith" in content:
+                score += 2
+
+            
+            if "kong" in content:
+                score += 2
+
+            
+            if "splunk" in content:
+                score += 2
+
+            
+            if "aria" in content or "wai" in content:
+                score += 2
+
+            
+            if "jupyter" in content:
+                score += 2
+
+            
+            if "transformers" in content and ("huggingface" in content or "hf" in content):
+                score += 2
+
+            
+            if "facade" in content:
+                score += 2
+
+            
+            if "wandb" in content or "weights and biases" in content:
+                score += 2
+
+            
+            if "namedtuple" in content or "named tuple" in content:
+                score += 2
+
+            
+            if "backpressure" in content or "back pressure" in content:
+                score += 2
+
+            
+            if "concurrent.futures" in content or "threadpoolexecutor" in content or "processpoolexecutor" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
