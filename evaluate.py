@@ -1815,6 +1815,66 @@ def evaluate_population():
             if "http/2" in content or "http2" in content or "http/3" in content or "http3" in content:
                 score += 2
 
+            
+            if "component library" in content or "design system" in content:
+                score += 2
+
+            
+            if "grafana oncall" in content or "grafana on-call" in content:
+                score += 2
+
+            
+            if "cockroachdb" in content or "cockroach" in content:
+                score += 2
+
+            
+            if "eventbridge" in content or "event bridge" in content:
+                score += 2
+
+            
+            if "solr" in content:
+                score += 2
+
+            
+            if "llamaindex" in content or "llama index" in content:
+                score += 2
+
+            
+            if "pdm" in content:
+                score += 2
+
+            
+            if "sidekiq" in content:
+                score += 2
+
+            
+            if "context manager" in content or "__enter__" in content or "__exit__" in content:
+                score += 2
+
+            
+            if "excel" in content or "xlsx" in content:
+                score += 2
+
+            
+            if "swift" in content or "swiftui" in content:
+                score += 2
+
+            
+            if "sumologic" in content or "sumo logic" in content:
+                score += 2
+
+            
+            if "l10n" in content or "localization" in content:
+                score += 2
+
+            
+            if "stripe" in content:
+                score += 2
+
+            
+            if "multipart" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
