@@ -128,15 +128,16 @@ autoresearch-ai-agent-skeleton/
 ├── program.md             # Instructions for OpenCode/Cursor
 ├── prompt.txt             # Seed prompt (outer loop)
 ├── eval.py                # Simple score evaluator (outer loop)
-├── .gitignore
-└── autoresearch-ai-agent-skeleton/  # Core evolution system
-    ├── mutate.py          # Genetic mutation engine
-    ├── evaluate.py        # 200+ signal scoring engine
-    ├── reflect.py         # Generation reflection & insights
-    ├── run_evolution.sh   # Full automation script
-    ├── reflection.md      # Historical record of all generations
-    ├── population/        # Evolved prompts (59 and counting)
-    └── results.log        # Latest evaluation results
+├── auto_evolve.py         # Automated evolution orchestration
+├── mutate.py              # Genetic mutation engine
+├── evaluate.py            # 200+ signal scoring engine
+├── reflect.py             # Generation reflection & insights
+├── run_evolution.sh       # Full automation script
+├── reflection.md          # Historical record of all generations
+├── results.log            # Latest evaluation results
+├── population/            # Evolved prompts (59 and counting)
+├── generated/             # Generated outputs
+└── .gitignore
 ```
 
 ## Why This Matters
