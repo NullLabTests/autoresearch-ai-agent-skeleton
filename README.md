@@ -1,9 +1,9 @@
 ![](https://img.shields.io/badge/status-active-success)
 ![](https://img.shields.io/badge/license-MIT-67ac09)
-![](https://img.shields.io/badge/python-3.12%2b-007ec6)
-![](https://img.shields.io/badge/generations-33-blueviolet)
-![](https://img.shields.io/badge/score-422%2f500-brightgreen)
-![](https://img.shields.io/badge/population-33%20prompts-orange)
+![](https://img.shields.io/badge/python-3.12+-007ec6)
+![](https://img.shields.io/badge/generations-59-blueviolet)
+![](https://img.shields.io/badge/score-500%2f500-brightgreen)
+![](https://img.shields.io/badge/population-59%20prompts-orange)
 
 # AutoResearch AI Agent Skeleton
 
@@ -20,7 +20,7 @@ The system implements a **"modify → evaluate → keep/revert"** loop, inspired
 ```
                ┌─────────────────┐
                │   Population    │
-               │  (33 prompts)   │
+               │  (59 prompts)   │
                └────────┬────────┘
                         │
                         ▼
@@ -57,30 +57,33 @@ The system implements a **"modify → evaluate → keep/revert"** loop, inspired
 | File | Purpose |
 |------|---------|
 | `mutate.py` | Creates new prompt variants from the best current prompt using four strategies: append (add a new instruction), crossover (merge with another prompt), rewrite_section (insert mid-prompt), and combine (splice halves of two prompts). |
-| `evaluate.py` | Scores each prompt against 200+ quality signals across categories: tech stack, code quality, testing depth, security, performance, documentation, deployment, design patterns, and more. Scores range from 35 (basic) to 500+ (production-grade). |
-| `reflect.py` | Records each generation's rankings, computes statistics (average, spread, min/max), and extracts observations about what differentiates elite prompts. All data persists to `reflection.md`. |
+| `evaluate.py` | Scores each prompt against 200+ quality signals across categories: tech stack, code quality, testing depth, security, performance, documentation, deployment, design patterns, and more. Scores range from 35 (basic) to 500 (production-grade). |
+| `reflect.py` | Records each generation's rankings, computes statistics (average, spread, min/max), and extracts observations about what differentiates elite prompts. All data persists to `reflection.md` (now 2400+ lines of evolution history). |
 | `run_evolution.sh` | Orchestrates the full loop: mutate → evaluate → reflect → commit → repeat. Run it and let evolution do the rest. |
 | `prompt.txt` | The seed prompt used in the top-level outer loop (simple eval-only system). |
 | `program.md` | Instructions for running the optimization loop with OpenCode or Cursor. |
 
 ### Mutation Strategies
 
-1. **Append** (30%) — Adds a random quality-improving instruction to the end of the best prompt
-2. **Crossover** (30%) — Merges a chunk from another prompt into the best prompt
-3. **Rewrite Section** (20%) — Inserts a new instruction at a random position in the prompt
-4. **Combine** (20%) — Splices the first half of the best prompt with the second half of another
+1. **Append (30%)** — Adds a random quality-improving instruction to the end of the best prompt
+2. **Crossover (30%)** — Merges a chunk from another prompt into the best prompt
+3. **Rewrite Section (20%)** — Inserts a new instruction at a random position in the prompt
+4. **Combine (20%)** — Splices the first half of the best prompt with the second half of another
 
 ## Current Status
 
-**Latest Generation:** 33
-**Best Prompt:** `prompt_031.txt` — **422/500**
-**Population Size:** 33 prompts
-**Score Progression:** 35 → 86 → 92 → 140 → 196 → 286 → 330 → 422
+- **Latest Generation:** 59
+- **Population Size:** 59 prompts
+- **Best Score:** 500/500 (ceiling reached)
+- **Prompts at Ceiling:** 24 prompts have hit the max score
+- **Score Progression:** 35 → 86 → 92 → 140 → 196 → 286 → 330 → 422 → 500
 
-The best prompt generates production-ready agent projects with:
+The system has **saturated the scoring ceiling** — 24 of 59 prompts now score the maximum 500 points. The next frontier is evolving the evaluation function itself to score for deeper qualities.
+
+The best prompts generate production-ready agent projects with:
 - Full `src/package/` layout with 20+ modules
 - LangGraph ReAct loop + Ollama local models
-- Pydantic v2 config, Pydantic validation, type hints everywhere
+- Pydantic v2 config, validation, type hints everywhere
 - Async/await, streaming, SSE/websocket support
 - OpenTelemetry + Prometheus + Grafana observability
 - OAuth2/JWT auth, rate limiting, encryption
@@ -88,6 +91,8 @@ The best prompt generates production-ready agent projects with:
 - Docker, docker-compose, Kubernetes, systemd deployment
 - Design patterns: factory, strategy, observer, repository, pipeline
 - CI/CD with GitHub Actions + dependabot + pre-commit
+
+[View full evolution history →](autoresearch-ai-agent-skeleton/reflection.md)
 
 ## Quick Start
 
@@ -131,12 +136,13 @@ autoresearch-ai-agent-skeleton/
     ├── reflect.py         # Generation reflection & insights
     ├── run_evolution.sh   # Full automation script
     ├── reflection.md      # Historical record of all generations
-    ├── population/        # Evolved prompts
-    │   ├── prompt_001.txt # Generation 1
-    │   ├── prompt_002.txt
-    │   └── ...            # 33 prompts and counting
+    ├── population/        # Evolved prompts (59 and counting)
     └── results.log        # Latest evaluation results
 ```
+
+## Why This Matters
+
+Prompt engineering is usually a manual, trial-and-error process. This project treats it as a **search problem** — let the computer try thousands of variations, keep what works, discard what doesn't, and let the population evolve toward better solutions. No human intuition required, just a good fitness function and enough generations.
 
 ## Credits
 
