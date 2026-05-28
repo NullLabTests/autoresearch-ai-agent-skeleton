@@ -92,7 +92,7 @@ The best prompts generate production-ready agent projects with:
 - Design patterns: factory, strategy, observer, repository, pipeline
 - CI/CD with GitHub Actions + dependabot + pre-commit
 
-[View full evolution history →](autoresearch-ai-agent-skeleton/reflection.md)
+[View full evolution history →](reflection.md)
 
 ## Quick Start
 
