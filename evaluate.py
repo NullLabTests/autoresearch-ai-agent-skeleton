@@ -795,6 +795,66 @@ def evaluate_population():
             if "webpush" in content or "web push" in content:
                 score += 2
 
+            
+            if "webxr" in content or "webxr" in content:
+                score += 2
+
+            
+            if "classmethod" in content or "staticmethod" in content:
+                score += 2
+
+            
+            if "abstractmethod" in content:
+                score += 2
+
+            
+            if "bundle" in content and ("size" in content or "analyzer" in content):
+                score += 2
+
+            
+            if "packer" in content:
+                score += 2
+
+            
+            if "apisix" in content:
+                score += 2
+
+            
+            if "kafka" in content:
+                score += 2
+
+            
+            if "buildkite" in content:
+                score += 2
+
+            
+            if "mediator" in content:
+                score += 2
+
+            
+            if "distributed lock" in content or "redlock" in content:
+                score += 2
+
+            
+            if "template method" in content:
+                score += 2
+
+            
+            if "ambassador" in content or "emissary" in content:
+                score += 2
+
+            
+            if "ip whitelist" in content or "ip allowlist" in content or "ip block" in content:
+                score += 2
+
+            
+            if "pwa" in content or "progressive web" in content:
+                score += 2
+
+            
+            if "preload" in content or "prefetch" in content or "preconnect" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
