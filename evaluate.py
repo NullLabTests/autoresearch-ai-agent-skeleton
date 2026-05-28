@@ -1935,6 +1935,66 @@ def evaluate_population():
             if "config class" in content or "config model" in content:
                 score += 2
 
+            
+            if "shopping cart" in content or "checkout" in content:
+                score += 2
+
+            
+            if "bull" in content or "bullmq" in content:
+                score += 2
+
+            
+            if "recurly" in content or "chargebee" in content:
+                score += 2
+
+            
+            if "logstash" in content:
+                score += 2
+
+            
+            if "ray" in content:
+                score += 2
+
+            
+            if "envoy" in content:
+                score += 2
+
+            
+            if "dask" in content:
+                score += 2
+
+            
+            if "wiki" in content:
+                score += 2
+
+            
+            if "scheduler" in content or "scheduler" in content:
+                score += 2
+
+            
+            if "unittest" in content:
+                score += 2
+
+            
+            if "traefik" in content:
+                score += 2
+
+            
+            if "pydantic ai" in content or "pydantic-ai" in content:
+                score += 2
+
+            
+            if "hatch" in content:
+                score += 2
+
+            
+            if "release please" in content or "release-please" in content:
+                score += 2
+
+            
+            if "coroutine" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
