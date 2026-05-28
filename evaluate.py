@@ -1155,6 +1155,66 @@ def evaluate_population():
             if "fargate" in content or "ecs" in content:
                 score += 2
 
+            
+            if "load shedding" in content:
+                score += 2
+
+            
+            if "playwright" in content:
+                score += 2
+
+            
+            if "nextauth" in content or "next-auth" in content:
+                score += 2
+
+            
+            if "iterator" in content:
+                score += 2
+
+            
+            if "readthedocs" in content or "read the docs" in content:
+                score += 2
+
+            
+            if "__new__" in content:
+                score += 2
+
+            
+            if "hipaa" in content:
+                score += 2
+
+            
+            if "passwordless" in content:
+                score += 2
+
+            
+            if "celery" in content:
+                score += 2
+
+            
+            if "outbox" in content or "transactional outbox" in content:
+                score += 2
+
+            
+            if "twelve factor" in content or "12 factor" in content:
+                score += 2
+
+            
+            if "autogen" in content or "autogen" in content:
+                score += 2
+
+            
+            if "superset" in content:
+                score += 2
+
+            
+            if "composite" in content:
+                score += 2
+
+            
+            if "zero trust" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
