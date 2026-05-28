@@ -54,12 +54,11 @@ xychart-beta
 | File | Purpose |
 |------|---------|
 | `mutate.py` | Creates new prompt variants using four genetic strategies |
-| `evaluate.py` | Scores each prompt against 200+ quality signals |
+| `evaluate.py` | Scores each prompt against 500+ quality signals |
 | `reflect.py` | Records rankings, statistics, and observations |
-| `run_evolution.sh` | Orchestrates the full automate loop: mutate → evaluate → reflect → commit |
-| `auto_evolve.py` | Extended evolution with adaptive signal injection |
-| `eval.py` | Quick single-prompt evaluator (outer loop) |
-| `prompt.txt` | Seed prompt for the outer loop |
+| `run_evolution.sh` | Orchestrates the automated loop: mutate → evaluate → reflect → commit |
+| `auto_evolve.py` | Extended evolution that injects new signals into evaluate.py to raise the ceiling |
+| `evolve_forever.py` | Aggressive evolution (200+ cycles), injects 400+ deep signals |
 
 ### Mutation Strategies
 
