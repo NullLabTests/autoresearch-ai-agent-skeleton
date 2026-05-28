@@ -316,6 +316,88 @@ def evaluate_population():
             if "config" in content and ("hierarchical" in content or "multi-env" in content):
                 score += 2
             
+            # --- LLM/Agent Specific ---
+            if "system prompt" in content or "system message" in content:
+                score += 2
+            if "temperature" in content:
+                score += 2
+            if "max token" in content:
+                score += 2
+            if "stop sequence" in content:
+                score += 2
+            if "few shot" in content or "few-shot" in content:
+                score += 2
+            if "chain of thought" in content or "cot" in content:
+                score += 2
+            if "structured output" in content:
+                score += 2
+            if "json mode" in content or "json format" in content:
+                score += 2
+            
+            # --- Observability depth ---
+            if "opentelemetry" in content or "otel" in content:
+                score += 2
+            if "grafana" in content or "datadog" in content:
+                score += 2
+            if "alert" in content:
+                score += 2
+            if "dashboard" in content:
+                score += 2
+            if "log level" in content or "log_level" in content:
+                score += 2
+            
+            # --- Advanced Python ---
+            if "descriptor" in content:
+                score += 2
+            if "metaclass" in content:
+                score += 2
+            if "abstract" in content and ("class" in content or "base" in content):
+                score += 2
+            if "protocol" in content:
+                score += 2
+            if "generic" in content or "typevar" in content:
+                score += 2
+            if "decorator" in content:
+                score += 2
+            if "contextvar" in content:
+                score += 2
+            if "weakref" in content:
+                score += 2
+            
+            # --- Networking/API ---
+            if "rest" in content or "restful" in content:
+                score += 2
+            if "graphql" in content:
+                score += 2
+            if "grpc" in content:
+                score += 2
+            if "oauth" in content:
+                score += 2
+            if "jwt" in content:
+                score += 2
+            if "cors" in content:
+                score += 2
+            
+            # --- Data Processing ---
+            if "pandas" in content:
+                score += 2
+            if "numpy" in content:
+                score += 2
+            if "parquet" in content or "feather" in content:
+                score += 2
+            if "dataframe" in content:
+                score += 2
+            
+            # --- Advanced Testing ---
+            if "benchmark" in content:
+                score += 2
+            if "load test" in content or "stress test" in content:
+                score += 2
+            if "fuzz" in content:
+                score += 2
+            if "regression" in content:
+                score += 2
+            
             # --- Output structure ---
             if "```" in content:
                 score += 3
@@ -336,7 +418,161 @@ def evaluate_population():
                 score += 2
             if words > 450:
                 score += 2
-            
+            if words > 600:
+                score += 2
+            if words > 800:
+                score += 2
+            if words > 1000:
+                score += 2
+
+            # --- Advanced Architecture ---
+            if "plugin" in content or "extension" in content:
+                score += 2
+            if "multiprocessing" in content or "distributed" in content:
+                score += 2
+            if "cqrs" in content or "event sourcing" in content:
+                score += 2
+            if "api version" in content or "versioning" in content:
+                score += 2
+            if "service mesh" in content or "istio" in content or "linkerd" in content:
+                score += 2
+            if "feature flag" in content or "toggle" in content:
+                score += 2
+            if "canary" in content or "blue-green" in content or "rolling update" in content:
+                score += 2
+
+            # --- ML/AI Depth ---
+            if "fine-tune" in content or "finetune" in content:
+                score += 2
+            if "lora" in content or "qlora" in content or "peft" in content:
+                score += 2
+            if "prompt template" in content or "jinja" in content or "mustache" in content:
+                score += 2
+            if "beam search" in content or "sampling" in content:
+                score += 2
+            if "classifier" in content or "classification" in content:
+                score += 2
+            if "sentiment" in content or "ner" in content or "entity extraction" in content:
+                score += 2
+            if "summarization" in content or "summarize" in content:
+                score += 2
+            if "translation" in content or "translate" in content:
+                score += 2
+            if "question answering" in content or "qa" in content:
+                score += 2
+
+            # --- Monitoring & Error Tracking ---
+            if "sentry" in content or "rollbar" in content or "error tracking" in content:
+                score += 2
+            if "datadog" in content and ("apm" in content or "trace" in content):
+                score += 2
+            if "elk" in content or "elasticsearch" in content or "kibana" in content:
+                score += 2
+            if "loki" in content or "promtail" in content:
+                score += 2
+            if "jaeger" in content or "tempo" in content:
+                score += 2
+            if "pagerduty" in content or "opsgenie" in content or "incident" in content:
+                score += 2
+            if "slo" in content or "sli" in content or "sla" in content:
+                score += 2
+
+            # --- Testing Specific ---
+            if "pytest-cov" in content or "pytest-cov" in content:
+                score += 2
+            if "pytest-asyncio" in content or "pytest-asyncio" in content:
+                score += 2
+            if "tox" in content or "nox" in content:
+                score += 2
+            if "mutation testing" in content or "mutmut" in content or "pytest-mutagen" in content:
+                score += 2
+            if "contract test" in content or "pact" in content:
+                score += 2
+
+            # --- Security Depth ---
+            if "rbac" in content or "role-based" in content:
+                score += 2
+            if "mfa" in content or "2fa" in content or "multi-factor" in content:
+                score += 2
+            if "sso" in content or "saml" in content or "oidc" in content:
+                score += 2
+            if "csrf" in content or "xss" in content or "injection" in content:
+                score += 2
+            if "csp" in content or "content security" in content or "helmet" in content:
+                score += 2
+            if "certificate" in content or "tls" in content or "ssl" in content:
+                score += 2
+            if "hsm" in content or "vault" in content or "key management" in content:
+                score += 2
+
+            # --- DevOps & Infrastructure ---
+            if "terraform" in content or "pulumi" in content or "iac" in content:
+                score += 2
+            if "ansible" in content or "chef" in content or "puppet" in content:
+                score += 2
+            if "helm" in content or "chart" in content:
+                score += 2
+            if "argo" in content or "flux" in content or "gitops" in content:
+                score += 2
+            if "hpa" in content or "horizontal pod autoscale" in content or "pod disruption" in content:
+                score += 2
+            if "service account" in content or "serviceaccount" in content:
+                score += 2
+            if "ingress" in content or "load balancer" in content:
+                score += 2
+            if "configmap" in content or "config map" in content or "secret" in content:
+                score += 2
+
+            # --- API & Integration Depth ---
+            if "rest api" in content or "rest endpoint" in content or "restful api" in content:
+                score += 2
+            if "webhook" in content and ("signature" in content or "verify" in content):
+                score += 2
+            if "asyncapi" in content or "async api" in content:
+                score += 2
+            if "grpc" in content and ("proto" in content or "protobuf" in content):
+                score += 2
+            if "graphql" in content and ("schema" in content or "resolver" in content or "query" in content):
+                score += 2
+
+            # --- Observability Depth ---
+            if "distributed tracing" in content or "trace id" in content:
+                score += 2
+            if "span" in content and ("trace" in content or "parent" in content):
+                score += 2
+            if "metrics" in content and ("histogram" in content or "counter" in content or "gauge" in content or "summary" in content):
+                score += 2
+            if "grafana" in content and ("dashboard" in content or "datasource" in content or "panel" in content):
+                score += 2
+            if "structured logging" in content or "json logging" in content:
+                score += 2
+
+            # --- Data Pipeline ---
+            if "etl" in content or "elt" in content:
+                score += 2
+            if "data pipeline" in content or "data processing" in content:
+                score += 2
+            if "stream" in content and ("process" in content or "analytics" in content):
+                score += 2
+            if "olap" in content or "oltp" in content:
+                score += 2
+            if "data warehouse" in content or "data lake" in content or "data mart" in content:
+                score += 2
+            if "redshift" in content or "bigquery" in content or "snowflake" in content or "clickhouse" in content:
+                score += 2
+
+            # --- Performance & Reliability ---
+            if "load balanc" in content:
+                score += 2
+            if "auto-scaling" in content or "autoscale" in content or "autoscaling" in content:
+                score += 2
+            if "chaos" in content or "chaos engineering" in content:
+                score += 2
+            if "disaster recovery" in content or "dr" in content:
+                score += 2
+            if "backup" in content and ("restore" in content or "recovery" in content):
+                score += 2
+
             # --- Specificity: mentions concrete versions/pins ---
             if "==" in content or ">=" in content:
                 score += 2
@@ -344,13 +580,44 @@ def evaluate_population():
                 score += 1
             if re.search(r'>=\s*\d+\.\d+\.\d+', content):
                 score += 2
-            
-            scores[f] = round(min(350.0, score), 1)
+
+            # --- Document structure depth ---
+            paragraphs = content.count("\n\n")
+            if paragraphs > 30: score += 2
+            if paragraphs > 60: score += 2
+            if paragraphs > 100: score += 2
+            if paragraphs > 150: score += 2
+
+            # --- Code block coverage ---
+            code_blocks = len(re.findall(r"```(\w+)", raw))
+            if code_blocks > 10: score += 2
+            if code_blocks > 20: score += 2
+            if code_blocks > 40: score += 2
+
+            # --- Technology diversity ---
+            tech_mentions = sum(1 for t in ["ollama", "langgraph", "pydantic", "httpx", "rich",
+                "structlog", "tenacity", "tiktoken", "pytest", "ruff", "mypy",
+                "pre-commit", "sqlalchemy", "alembic", "redis", "docker",
+                "kubernetes", "k8s", "fastapi", "uvicorn", "opentelemetry",
+                "grafana", "prometheus", "cryptography", "pandas", "numpy",
+                "sphinx", "mkdocs", "github actions", "hypothesis",
+                "datadog", "sentry", "elasticsearch", "kibana", "helm",
+                "terraform", "ansible", "argocd", "jaeger"] if t in content)
+            if tech_mentions > 20: score += 3
+            if tech_mentions > 30: score += 3
+
+            scores[f] = round(min(500.0, score), 1)
             print(f"{f}: {scores[f]}")
     
     if scores:
         best = max(scores, key=scores.get)
         print(f"\nBest prompt this round: {best} ({scores[best]})")
+
+    # Write results.log for mutate.py to read
+    with open("results.log", "w") as f:
+        for name, sc in sorted(scores.items(), key=lambda x: -x[1]):
+            f.write(f"{name}: {sc}\n")
+
     return scores
 
 

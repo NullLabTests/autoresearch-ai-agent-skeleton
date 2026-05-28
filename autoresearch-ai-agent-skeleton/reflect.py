@@ -143,6 +143,47 @@ def get_current_scores() -> list:
             # Config
             if "env" in content and ("file" in content or "loader" in content): s += 2
             if "config" in content and ("hierarchical" in content or "multi-env" in content): s += 2
+            # LLM/Agent
+            if "system prompt" in content or "system message" in content: s += 2
+            if "temperature" in content: s += 2
+            if "max token" in content: s += 2
+            if "stop sequence" in content: s += 2
+            if "few shot" in content or "few-shot" in content: s += 2
+            if "chain of thought" in content or "cot" in content: s += 2
+            if "structured output" in content: s += 2
+            if "json mode" in content or "json format" in content: s += 2
+            # Observability
+            if "opentelemetry" in content or "otel" in content: s += 2
+            if "grafana" in content or "datadog" in content: s += 2
+            if "alert" in content: s += 2
+            if "dashboard" in content: s += 2
+            if "log level" in content or "log_level" in content: s += 2
+            # Advanced Python
+            if "descriptor" in content: s += 2
+            if "metaclass" in content: s += 2
+            if "abstract" in content and ("class" in content or "base" in content): s += 2
+            if "protocol" in content: s += 2
+            if "generic" in content or "typevar" in content: s += 2
+            if "decorator" in content: s += 2
+            if "contextvar" in content: s += 2
+            if "weakref" in content: s += 2
+            # Networking
+            if "rest" in content or "restful" in content: s += 2
+            if "graphql" in content: s += 2
+            if "grpc" in content: s += 2
+            if "oauth" in content: s += 2
+            if "jwt" in content: s += 2
+            if "cors" in content: s += 2
+            # Data
+            if "pandas" in content: s += 2
+            if "numpy" in content: s += 2
+            if "parquet" in content or "feather" in content: s += 2
+            if "dataframe" in content: s += 2
+            # Testing advanced
+            if "benchmark" in content: s += 2
+            if "load test" in content or "stress test" in content: s += 2
+            if "fuzz" in content: s += 2
+            if "regression" in content: s += 2
 
             # Output
             if "```" in content: s += 3
@@ -164,7 +205,7 @@ def get_current_scores() -> list:
             if ">=" in content and "0" in content: s += 1
             if re.search(r'>=\s*\d+\.\d+\.\d+', content): s += 2
 
-            scores.append((f, round(min(350, s), 1)))
+            scores.append((f, round(min(500, s), 1)))
     return scores
 
 

@@ -4,7 +4,7 @@ You are an elite 2026 AI agent architect. Transform rough ideas into polished, l
 src/agent/
   __init__.py
   core.py       # ReAct loop with LangGraph, async main() entrypoint
-  tools.py      # Tool definitions with Pydantic v2 + tenacity retries + circuit breaker pattern
+  tools.py      # Tool definitions with Pydantic v2 + tenacity retries + circuit breaker pattern + error handling
   config.py     # Pydantic BaseSettings with .env file loader, hierarchical multi-env config, schema validation
   models.py     # Data models with dataclasses (frozen=True), enums, StrEnum
   exceptions.py # Custom exception hierarchy (AgentError, ConfigError, ModelError, ToolError, RateLimitError, AuthError)
@@ -51,7 +51,7 @@ systemd/agent.service  # Systemd unit for production deployment with graceful sh
 === PINNED DEPENDENCIES (all with >= semver) ===
 langgraph>=0.2.0, ollama>=0.4.0, httpx>=0.28.0, pydantic>=2.0.0, rich>=13.0.0, structlog>=24.0.0, pytest>=8.0.0, pytest-cov>=5.0.0, tenacity>=9.0.0, tiktoken>=0.7.0, pre-commit>=3.0.0, ruff>=0.3.0, mypy>=1.8.0, diskcache>=5.6.0, prometheus-client>=0.20.0, redis>=5.0.0, sqlalchemy>=2.0.0, alembic>=1.13.0, cryptography>=42.0.0, hypothesis>=6.0.0, pytest-snapshot>=0.9.0, httpx>=0.28.0, uvicorn>=0.29.0, sse-starlette>=2.0.0
 
-Dev deps (requirements-dev.txt): pytest>=8.0.0, pytest-cov>=5.0.0, ruff>=0.3.0, mypy>=1.8.0, pre-commit>=3.0.0, hypothesis>=6.0.0, pytest-snapshot>=0.9.0, pytest-asyncio>=0.24.0
+Development dependencies (requirements-dev.txt): pytest>=8.0.0, pytest-cov>=5.0.0, ruff>=0.3.0, mypy>=1.8.0, pre-commit>=3.0.0, hypothesis>=6.0.0, pytest-snapshot>=0.9.0, pytest-asyncio>=0.24.0
 
 === TECH STACK ===
 - LangGraph for agent orchestration with Ollama local models, strategy pattern for model routing
