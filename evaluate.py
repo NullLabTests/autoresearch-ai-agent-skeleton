@@ -855,6 +855,66 @@ def evaluate_population():
             if "preload" in content or "prefetch" in content or "preconnect" in content:
                 score += 2
 
+            
+            if "unicode" in content or "utf" in content:
+                score += 2
+
+            
+            if "new relic" in content or "newrelic" in content:
+                score += 2
+
+            
+            if "resend" in content:
+                score += 2
+
+            
+            if "bridge" in content:
+                score += 2
+
+            
+            if "svelte" in content or "sveltekit" in content:
+                score += 2
+
+            
+            if "onion" in content:
+                score += 2
+
+            
+            if "webtransport" in content:
+                score += 2
+
+            
+            if "openid" in content:
+                score += 2
+
+            
+            if "scim" in content:
+                score += 2
+
+            
+            if "json-ld" in content or "jsonld" in content:
+                score += 2
+
+            
+            if "turborepo" in content or "turbo" in content:
+                score += 2
+
+            
+            if "pluralization" in content or "plural" in content:
+                score += 2
+
+            
+            if "atexit" in content:
+                score += 2
+
+            
+            if "vitest" in content:
+                score += 2
+
+            
+            if "geolocation" in content or "geo-restrict" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
