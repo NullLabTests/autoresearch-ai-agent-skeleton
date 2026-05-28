@@ -915,6 +915,66 @@ def evaluate_population():
             if "geolocation" in content or "geo-restrict" in content:
                 score += 2
 
+            
+            if "hexagonal" in content or "ports and adapters" in content:
+                score += 2
+
+            
+            if "config override" in content:
+                score += 2
+
+            
+            if "step function" in content or "stepfunction" in content:
+                score += 2
+
+            
+            if "vector database" in content or "pinecone" in content or "weaviate" in content or "qdrant" in content:
+                score += 2
+
+            
+            if "image optimization" in content or "image optimize" in content:
+                score += 2
+
+            
+            if "schema.org" in content or "schema org" in content:
+                score += 2
+
+            
+            if "selenium" in content:
+                score += 2
+
+            
+            if "flyweight" in content:
+                score += 2
+
+            
+            if "tree shaking" in content or "treeshaking" in content:
+                score += 2
+
+            
+            if "rss" in content or "atom" in content:
+                score += 2
+
+            
+            if "lcp" in content or "largest contentful" in content:
+                score += 2
+
+            
+            if "hierarchical config" in content:
+                score += 2
+
+            
+            if "concurrency limit" in content or "concurrency control" in content:
+                score += 2
+
+            
+            if "shadcn" in content or "radix" in content:
+                score += 2
+
+            
+            if "__slots__" in content:
+                score += 2
+
             scores[f] = round(min(1000.0, score), 1)
             print(f"{f}: {scores[f]}")
     
