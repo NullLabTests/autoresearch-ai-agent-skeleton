@@ -25,4 +25,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Quick sanity check
-        run: python -c "from evaluate import evaluate; print('evaluate.py loads OK')"
+        run: python -c "from evaluate import evaluate_generated_project; print('evaluate.py loads OK')"
