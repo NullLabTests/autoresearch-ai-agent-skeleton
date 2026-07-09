@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Aggressive auto-evolution: inject 100s of signals, keep champion at ceiling."""
-import os, re, sys, random, subprocess, time
-from datetime import datetime
+import os
+import re
+import sys
+import random
+import subprocess
+import time
 
 CYCLES = int(sys.argv[1]) if len(sys.argv) > 1 else 200
 INJECT_EVERY = 3
@@ -558,13 +562,11 @@ def inject_new_signals(count=SIGNALS_PER_INJECT):
     with open("evaluate.py") as f:
         content = f.read()
 
-    existing = get_existing_keywords()
     insert_marker = "scores[f] = round(min(1000.0, score), 1)"
 
     # Find signals not yet in the file
     available = []
     for code, desc in FLATTENED:
-        kw = code.split('"')[1].lower()
         # Check if any keyword already exists
         parts = [p.strip('"') for p in re.findall(r'"([^"]+)"', code)]
         if not any(p.lower() in content.lower() for p in parts):
@@ -578,7 +580,7 @@ def inject_new_signals(count=SIGNALS_PER_INJECT):
     injected = []
     for code, desc in to_inject:
         lines = code.split("\n")
-        indented = "\n".join("            " + l if l.strip() else l for l in lines)
+        indented = "\n".join("            " + line if line.strip() else line for line in lines)
         block = f"\n{indented}"
         # Insert before the scores[f] line
         new_content = content.replace(insert_marker, block + "\n\n            " + insert_marker, 1)
@@ -618,7 +620,7 @@ def main():
             if "Best prompt" in line:
                 print(f"  [eval] {line}")
         # Get new champion possibilities
-        champions = [l for l in out_lines if ": 1000.0" in l]
+        champions = [line for line in out_lines if ": 1000.0" in line]
         print(f"  [eval] Champions at 1000: {len(champions)}")
 
         # Reflect
@@ -641,7 +643,6 @@ def main():
 
     with open("results.log") as f:
         first = f.readline()
-    best_score = first.split(":")[1].strip() if ":" in first else "?"
 
     print(f"\n{'='*70}")
     print(f"EVOLUTION COMPLETE: {cycles_run} cycles, {pop_count} prompts")

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Auto-evolution loop: evaluate -> reflect -> mutate with fresh signals injected periodically."""
 import os
-import re
 import sys
 import random
 import subprocess
@@ -123,7 +122,7 @@ def inject_new_signals(count=8):
     for code, desc in to_inject:
         # Build the full code block with proper indentation
         lines = code.split("\n")
-        indented = "\n".join("            " + l if l.strip() else l for l in lines)
+        indented = "\n".join("            " + line if line.strip() else line for line in lines)
         block = f"\n{indented}"
         new_content = content.replace(insert_marker, block + "\n            " + insert_marker)
         if new_content != content:
